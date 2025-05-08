@@ -16,6 +16,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 import numpy as np
 import streamlit as st
+from streamlit.runtime.scriptrunner import get_script_run_ctx
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import threading
@@ -124,23 +125,43 @@ class ForexDashboard:
         Returns:
             DataFrame with raw price data
         """
-        # Check if we need to reload
-        if not force and self.raw_data is not None and self.last_update_time['raw'] is not None:
-            if (datetime.now() - self.last_update_time['raw']).total_seconds() < 60:
-                # Data is fresh enough
+        # Anti-flickering: ALWAYS keep existing data available until new data is ready
+        existing_data = None
+        
+        # First try to get from session state cache for immediate display
+        if 'cached_data' in st.session_state and st.session_state.data_loaded and st.session_state.cached_data['raw'] is not None:
+            existing_data = st.session_state.cached_data['raw']
+            
+            # Return cached data immediately to prevent flicker if not forcing reload
+            if not force:
+                self.raw_data = existing_data
                 return self.raw_data
+        # Otherwise use instance data if available
+        elif self.raw_data is not None:
+            existing_data = self.raw_data
+            
+            # Check freshness
+            if not force and self.last_update_time['raw'] is not None:
+                if (datetime.now() - self.last_update_time['raw']).total_seconds() < 60:
+                    # Data is fresh enough
+                    return self.raw_data
         
         try:
             # Find latest file
             latest_file = self.find_latest_file(self.raw_data_dir, '.csv')
             if latest_file is None:
+                # Return existing data if available
+                if existing_data is not None:
+                    return existing_data
                 return None
                 
             # Check file modification time
             last_modified = datetime.fromtimestamp(os.path.getmtime(latest_file))
             if not force and self.last_update_time['raw'] is not None:
                 if last_modified <= self.last_update_time['raw']:
-                    # File hasn't changed
+                    # File hasn't changed - return existing data
+                    if existing_data is not None:
+                        return existing_data
                     return self.raw_data
             
             logger.info(f"Loading raw data from {latest_file}")
@@ -159,10 +180,18 @@ class ForexDashboard:
             self.raw_data = df
             self.last_update_time['raw'] = datetime.now()
             
+            # Update session state cache if possible
+            if 'cached_data' in st.session_state:
+                st.session_state.cached_data['raw'] = df
+                st.session_state.data_loaded = True
+            
             return df
             
         except Exception as e:
             logger.error(f"Error loading raw data: {str(e)}")
+            # Return existing data rather than None if possible
+            if existing_data is not None:
+                return existing_data
             return None
     
     def load_analyzed_data(self, depth, force=False):
@@ -176,23 +205,44 @@ class ForexDashboard:
         Returns:
             DataFrame with analyzed data
         """
-        # Check if we need to reload
-        if not force and self.analyzed_data[depth] is not None and self.last_update_time['analyzed'][depth] is not None:
-            if (datetime.now() - self.last_update_time['analyzed'][depth]).total_seconds() < 60:
-                # Data is fresh enough
-                return self.analyzed_data[depth]
+        # Anti-flickering: ALWAYS keep existing data available until new data is ready
+        existing_data = None
+        
+        # First try to get from session state cache for immediate display
+        if 'cached_data' in st.session_state and st.session_state.data_loaded:
+            if depth in st.session_state.cached_data.get('analyzed', {}) and st.session_state.cached_data['analyzed'][depth] is not None:
+                existing_data = st.session_state.cached_data['analyzed'][depth]
+                
+                # Return cached data immediately to prevent flicker if not forcing reload
+                if not force:
+                    self.analyzed_data[depth] = existing_data
+                    return self.analyzed_data[depth]
+        # Otherwise use instance data if available
+        elif self.analyzed_data[depth] is not None:
+            existing_data = self.analyzed_data[depth]
+            
+            # Check freshness
+            if not force and self.last_update_time['analyzed'][depth] is not None:
+                if (datetime.now() - self.last_update_time['analyzed'][depth]).total_seconds() < 60:
+                    # Data is fresh enough
+                    return self.analyzed_data[depth]
         
         try:
             # Find latest file
             latest_file = self.find_latest_file(self.analyzed_data_dirs[depth], '_analyzed.csv')
             if latest_file is None:
+                # Return existing data if available
+                if existing_data is not None:
+                    return existing_data
                 return None
                 
             # Check file modification time
             last_modified = datetime.fromtimestamp(os.path.getmtime(latest_file))
             if not force and self.last_update_time['analyzed'][depth] is not None:
                 if last_modified <= self.last_update_time['analyzed'][depth]:
-                    # File hasn't changed
+                    # File hasn't changed - return existing data
+                    if existing_data is not None:
+                        return existing_data
                     return self.analyzed_data[depth]
             
             logger.info(f"Loading analyzed data for {depth} from {latest_file}")
@@ -211,10 +261,20 @@ class ForexDashboard:
             self.analyzed_data[depth] = df
             self.last_update_time['analyzed'][depth] = datetime.now()
             
+            # Update session state cache
+            if 'cached_data' in st.session_state:
+                if 'analyzed' not in st.session_state.cached_data:
+                    st.session_state.cached_data['analyzed'] = {}
+                st.session_state.cached_data['analyzed'][depth] = df
+                st.session_state.data_loaded = True
+            
             return df
             
         except Exception as e:
             logger.error(f"Error loading analyzed data for {depth}: {str(e)}")
+            # Return existing data rather than None if possible
+            if existing_data is not None:
+                return existing_data
             return None
     
     def load_pattern_data(self, depth, force=False):
@@ -228,6 +288,13 @@ class ForexDashboard:
         Returns:
             Dictionary with pattern data
         """
+        # First check session state cache for immediate display
+        if not force and 'cached_data' in st.session_state and st.session_state.data_loaded:
+            if depth in st.session_state.cached_data.get('patterns', {}) and st.session_state.cached_data['patterns'][depth] is not None:
+                # Return cached data immediately to prevent flicker
+                self.pattern_data[depth] = st.session_state.cached_data['patterns'][depth]
+                return self.pattern_data[depth]
+                
         # Check if we need to reload
         if not force and self.pattern_data[depth] is not None and self.last_update_time['analyzed'][depth] is not None:
             if (datetime.now() - self.last_update_time['analyzed'][depth]).total_seconds() < 60:
@@ -290,10 +357,20 @@ class ForexDashboard:
             self.pattern_data[depth] = patterns
             self.last_update_time['analyzed'][depth] = datetime.now()
             
+            # Update session state cache
+            if 'cached_data' in st.session_state:
+                if 'patterns' not in st.session_state.cached_data:
+                    st.session_state.cached_data['patterns'] = {}
+                st.session_state.cached_data['patterns'][depth] = patterns
+                st.session_state.data_loaded = True
+            
             return patterns
             
         except Exception as e:
             logger.error(f"Error loading pattern data for {depth}: {str(e)}")
+            # If we have cached data, return it as fallback
+            if 'cached_data' in st.session_state and 'patterns' in st.session_state.cached_data and depth in st.session_state.cached_data['patterns']:
+                return st.session_state.cached_data['patterns'][depth]
             return None
     
     def load_predictions(self, force=False):
@@ -306,6 +383,13 @@ class ForexDashboard:
         Returns:
             Dictionary with prediction data
         """
+        # First check session state cache for immediate display
+        if not force and 'cached_data' in st.session_state and st.session_state.data_loaded:
+            if st.session_state.cached_data['predictions'] is not None:
+                # Return cached data immediately to prevent flicker
+                self.predictions = st.session_state.cached_data['predictions']
+                return self.predictions
+                
         # Check if we need to reload
         if not force and self.predictions is not None and self.last_update_time['predictions'] is not None:
             if (datetime.now() - self.last_update_time['predictions']).total_seconds() < 60:
@@ -335,10 +419,18 @@ class ForexDashboard:
             self.predictions = predictions
             self.last_update_time['predictions'] = datetime.now()
             
+            # Update session state cache
+            if 'cached_data' in st.session_state:
+                st.session_state.cached_data['predictions'] = predictions
+                st.session_state.data_loaded = True
+            
             return predictions
             
         except Exception as e:
             logger.error(f"Error loading predictions: {str(e)}")
+            # If we have cached data, return it as fallback
+            if 'cached_data' in st.session_state and st.session_state.cached_data['predictions'] is not None:
+                return st.session_state.cached_data['predictions']
             return None
     
     def load_performance(self, force=False):
@@ -351,6 +443,13 @@ class ForexDashboard:
         Returns:
             Dictionary with performance metrics
         """
+        # First check session state cache for immediate display
+        if not force and 'cached_data' in st.session_state and st.session_state.data_loaded:
+            if st.session_state.cached_data['performance'] is not None:
+                # Return cached data immediately to prevent flicker
+                self.performance = st.session_state.cached_data['performance']
+                return self.performance
+                
         # Check if we need to reload
         if not force and self.performance is not None and self.last_update_time['performance'] is not None:
             if (datetime.now() - self.last_update_time['performance']).total_seconds() < 60:
@@ -358,10 +457,13 @@ class ForexDashboard:
                 return self.performance
         
         try:
-            # Find latest file
-            latest_file = self.find_latest_file(self.prediction_dir, '_performance.json')
+            # Find latest file - FIXED: Use performance_dir instead of prediction_dir
+            latest_file = self.find_latest_file(self.performance_dir, '_performance.json')
             if latest_file is None:
-                return None
+                # Try for latest_performance.json format
+                latest_file = self.find_latest_file(self.performance_dir, 'latest_performance.json')
+                if latest_file is None:
+                    return None
                 
             # Check file modification time
             last_modified = datetime.fromtimestamp(os.path.getmtime(latest_file))
@@ -380,10 +482,18 @@ class ForexDashboard:
             self.performance = performance
             self.last_update_time['performance'] = datetime.now()
             
+            # Update session state cache
+            if 'cached_data' in st.session_state:
+                st.session_state.cached_data['performance'] = performance
+                st.session_state.data_loaded = True
+            
             return performance
             
         except Exception as e:
             logger.error(f"Error loading performance metrics: {str(e)}")
+            # If we have cached data, return it as fallback
+            if 'cached_data' in st.session_state and st.session_state.cached_data['performance'] is not None:
+                return st.session_state.cached_data['performance']
             return None
     
     def create_price_chart(self, df, depth=None, patterns=None, predictions=None):
@@ -535,43 +645,10 @@ class ForexDashboard:
                     row=2, col=1
                 )
             
-            # Add pattern markers if available
-            if patterns:
-                for pattern_name, pattern_data in patterns.items():
-                    for instance in pattern_data['instances']:
-                        try:
-                            # Convert timestamp to datetime if it's a string
-                            if isinstance(instance['timestamp'], str):
-                                timestamp = datetime.fromisoformat(instance['timestamp'].replace('Z', '+00:00'))
-                            else:
-                                timestamp = instance['timestamp']
-                            
-                            # Check if timestamp is in displayed range
-                            if timestamp in display_df['timestamp'].values:
-                                # Get pattern type
-                                pattern_type = instance['type']
-                                # Set color based on type
-                                color = 'green' if pattern_type == 'bullish' else 'red'
-                                
-                                # Add annotation
-                                fig.add_annotation(
-                                    x=timestamp,
-                                    y=instance['high'] * 1.001 if pattern_type == 'bullish' else instance['low'] * 0.999,
-                                    text=pattern_name,
-                                    showarrow=True,
-                                    arrowhead=2,
-                                    arrowsize=1,
-                                    arrowwidth=1,
-                                    arrowcolor=color,
-                                    font=dict(size=8, color=color),
-                                    bgcolor=f"rgba{(*hex_to_rgb(color), 0.3)}",
-                                    row=1, col=1
-                                )
-                        except Exception as e:
-                            logger.error(f"Error adding pattern marker: {str(e)}")
-                            continue
+            # Track ML model predictions for pattern highlights
+            ml_prediction_points = []
             
-            # Add prediction markers if available
+            # Add prediction markers if available - process predictions first to identify ML predictions
             if predictions and 'predictions' in predictions:
                 for pred in predictions['predictions'][-5:]:  # Show last 5 predictions
                     try:
@@ -589,6 +666,25 @@ class ForexDashboard:
                         # Get prediction details
                         direction = pred['direction']
                         confidence = pred['confidence']
+                        
+                        # Check if this was an ML prediction
+                        if 'signals' in pred and 'ml' in pred['signals']:
+                            # This is an ML-based prediction, add to our highlight list
+                            ml_direction = pred['signals']['ml']['direction'] 
+                            ml_confidence = pred['signals']['ml']['confidence']
+                            
+                            # Only highlight strong ML signals
+                            if ml_confidence > 0.65:
+                                # Find the closest price point
+                                closest_idx = display_df['timestamp'].searchsorted(timestamp)
+                                if closest_idx < len(display_df):
+                                    price_point = {
+                                        'timestamp': timestamp,
+                                        'price': display_df.iloc[closest_idx]['close'],
+                                        'direction': ml_direction,
+                                        'confidence': ml_confidence
+                                    }
+                                    ml_prediction_points.append(price_point)
                         
                         # Set color based on direction
                         color = 'green' if direction == 'UP' else 'red' if direction == 'DOWN' else 'gray'
@@ -642,6 +738,97 @@ class ForexDashboard:
                     except Exception as e:
                         logger.error(f"Error adding prediction marker: {str(e)}")
                         continue
+            
+            # Add pattern markers if available
+            if patterns:
+                for pattern_name, pattern_data in patterns.items():
+                    for instance in pattern_data['instances']:
+                        try:
+                            # Convert timestamp to datetime if it's a string
+                            if isinstance(instance['timestamp'], str):
+                                timestamp = datetime.fromisoformat(instance['timestamp'].replace('Z', '+00:00'))
+                            else:
+                                timestamp = instance['timestamp']
+                            
+                            # Check if timestamp is in displayed range
+                            if timestamp in display_df['timestamp'].values:
+                                # Get pattern type
+                                pattern_type = instance['type']
+                                # Set color based on type
+                                color = 'green' if pattern_type == 'bullish' else 'red'
+                                
+                                # Check if this pattern is at an ML prediction point
+                                is_ml_pattern = False
+                                for ml_point in ml_prediction_points:
+                                    time_diff = abs((ml_point['timestamp'] - timestamp).total_seconds())
+                                    # If the pattern is within 5 minutes of an ML prediction point
+                                    if time_diff < 300:
+                                        is_ml_pattern = True
+                                        break
+                                
+                                # Add robot icon for ML-detected patterns
+                                if is_ml_pattern:
+                                    pattern_text = f"🤖 {pattern_name}"
+                                    arrow_color = 'blue'  # Special color for ML-detected patterns
+                                    bg_color = f"rgba{(*hex_to_rgb('blue'), 0.4)}"
+                                else:
+                                    pattern_text = pattern_name
+                                    arrow_color = color
+                                    bg_color = f"rgba{(*hex_to_rgb(color), 0.3)}"
+                                
+                                # Add annotation
+                                fig.add_annotation(
+                                    x=timestamp,
+                                    y=instance['high'] * 1.001 if pattern_type == 'bullish' else instance['low'] * 0.999,
+                                    text=pattern_text,
+                                    showarrow=True,
+                                    arrowhead=2,
+                                    arrowsize=1,
+                                    arrowwidth=1,
+                                    arrowcolor=arrow_color,
+                                    font=dict(size=8, color=arrow_color),
+                                    bgcolor=bg_color,
+                                    row=1, col=1
+                                )
+                        except Exception as e:
+                            logger.error(f"Error adding pattern marker: {str(e)}")
+                            continue
+            
+            # Add special ML prediction markers
+            for ml_point in ml_prediction_points:
+                try:
+                    if ml_point['direction'] == 'UP':
+                        marker_color = 'blue'
+                        marker_symbol = 'triangle-up'
+                        y_position = ml_point['price'] * 0.9995
+                    else:
+                        marker_color = 'purple'
+                        marker_symbol = 'triangle-down'
+                        y_position = ml_point['price'] * 1.0005
+                        
+                    # Add a special marker for ML predictions
+                    fig.add_trace(
+                        go.Scatter(
+                            x=[ml_point['timestamp']],
+                            y=[y_position],
+                            mode='markers+text',
+                            marker=dict(
+                                symbol=marker_symbol,
+                                size=12,
+                                color=marker_color,
+                                line=dict(width=2, color='white')
+                            ),
+                            text=['🤖'],
+                            textposition='middle center',
+                            name='ML Signal',
+                            showlegend=False
+                        ),
+                        row=1, col=1
+                    )
+                    
+                except Exception as e:
+                    logger.error(f"Error adding ML marker: {str(e)}")
+                    continue
             
             # Update layout
             title = f"Price Chart for {self.symbol}"
@@ -871,11 +1058,26 @@ class ForexDashboard:
             return "<div class='stCard'><h3>No Performance Data Available</h3></div>"
         
         try:
-            # Extract metrics
+            # Extract metrics - Handle different potential formats
             win_rate = performance.get('win_rate', 0) * 100
+            
+            # Get total predictions - use ensemble method count if total_predictions not present
             total_predictions = performance.get('total_predictions', 0)
+            if not total_predictions and 'by_method' in performance and 'ensemble_method' in performance['by_method']:
+                total_predictions = performance['by_method']['ensemble_method'].get('count', 0)
+            
+            # Get win/loss counts - calculate from by_method if not directly available
             win_count = performance.get('win_count', 0)
             loss_count = performance.get('loss_count', 0)
+            
+            if not win_count and 'by_method' in performance:
+                # Sum wins across all methods
+                win_count = sum(method.get('wins', 0) for method in performance['by_method'].values())
+            
+            if not loss_count and 'by_method' in performance:
+                # Sum losses across all methods
+                loss_count = sum(method.get('losses', 0) for method in performance['by_method'].values())
+            
             profit_factor = performance.get('profit_factor', 0)
             avg_win = performance.get('average_win', 0)
             avg_loss = performance.get('average_loss', 0)
@@ -998,41 +1200,276 @@ class ForexDashboard:
             logger.error(f"Error creating prediction history table: {str(e)}")
             return None
     
+    def _thread_safe_load_raw_data(self, force=True):
+        """Thread-safe version of load_raw_data that doesn't access session state."""
+        try:
+            # Find latest file
+            latest_file = self.find_latest_file(self.raw_data_dir, '.csv')
+            if latest_file is None:
+                return None
+                
+            # Check file modification time
+            last_modified = datetime.fromtimestamp(os.path.getmtime(latest_file))
+            if not force and self.last_update_time['raw'] is not None:
+                if last_modified <= self.last_update_time['raw']:
+                    # File hasn't changed
+                    return self.raw_data
+            
+            logger.info(f"Loading raw data from {latest_file}")
+            df = pd.read_csv(latest_file)
+            
+            # Ensure timestamp is datetime
+            if 'timestamp' in df.columns:
+                df['timestamp'] = pd.to_datetime(df['timestamp'])
+                
+            # Sort by timestamp
+            df = df.sort_values('timestamp').reset_index(drop=True)
+            
+            logger.info(f"Loaded {len(df)} records from {latest_file}")
+            
+            # Update cache
+            self.last_update_time['raw'] = datetime.now()
+            
+            return df
+            
+        except Exception as e:
+            logger.error(f"Error loading raw data: {str(e)}")
+            return None
+            
+    def _thread_safe_load_analyzed_data(self, depth, force=True):
+        """Thread-safe version of load_analyzed_data that doesn't access session state."""
+        try:
+            # Find latest file
+            latest_file = self.find_latest_file(self.analyzed_data_dirs[depth], '_analyzed.csv')
+            if latest_file is None:
+                return None
+                
+            # Check file modification time
+            last_modified = datetime.fromtimestamp(os.path.getmtime(latest_file))
+            if not force and self.last_update_time['analyzed'][depth] is not None:
+                if last_modified <= self.last_update_time['analyzed'][depth]:
+                    # File hasn't changed
+                    return self.analyzed_data[depth]
+            
+            logger.info(f"Loading analyzed data for {depth} from {latest_file}")
+            df = pd.read_csv(latest_file)
+            
+            # Ensure timestamp is datetime
+            if 'timestamp' in df.columns:
+                df['timestamp'] = pd.to_datetime(df['timestamp'])
+                
+            # Sort by timestamp
+            df = df.sort_values('timestamp').reset_index(drop=True)
+            
+            logger.info(f"Loaded {len(df)} records from {latest_file}")
+            
+            # Update cache time
+            self.last_update_time['analyzed'][depth] = datetime.now()
+            
+            return df
+            
+        except Exception as e:
+            logger.error(f"Error loading analyzed data for {depth}: {str(e)}")
+            return None
+            
+    def _thread_safe_load_pattern_data(self, depth, force=True):
+        """Thread-safe version of load_pattern_data that doesn't access session state."""
+        try:
+            # Find latest file
+            latest_file = self.find_latest_file(self.analyzed_data_dirs[depth], '_patterns.json')
+            if latest_file is None:
+                return None
+                
+            # Check file modification time
+            last_modified = datetime.fromtimestamp(os.path.getmtime(latest_file))
+            if not force and self.last_update_time['analyzed'][depth] is not None:
+                if last_modified <= self.last_update_time['analyzed'][depth]:
+                    # File hasn't changed
+                    return self.pattern_data[depth]
+            
+            logger.info(f"Loading pattern data for {depth} from {latest_file}")
+            with open(latest_file, 'r') as f:
+                patterns_data = json.load(f)
+            
+            # Properly process the new pattern format
+            # The top level object has pattern array, support and resistance levels
+            if 'patterns' in patterns_data and isinstance(patterns_data['patterns'], list):
+                # Convert to the format expected by the dashboard
+                patterns = {}
+                for pattern in patterns_data['patterns']:
+                    pattern_name = pattern['pattern']
+                    if pattern_name not in patterns:
+                        patterns[pattern_name] = {
+                            'instances': [],
+                            'count': 0
+                        }
+                    
+                    # Determine pattern type
+                    if pattern_name.startswith('BULLISH') or pattern_name in ['HAMMER', 'MORNING_STAR', 'PIERCING']:
+                        pattern_type = 'bullish'
+                    else:
+                        pattern_type = 'bearish'
+                    
+                    # Add instance
+                    patterns[pattern_name]['instances'].append({
+                        'timestamp': pattern['time'],
+                        'type': pattern_type,
+                        'strength': pattern['strength'],
+                        'high': 0.0,  # Not provided in new format
+                        'low': 0.0    # Not provided in new format
+                    })
+                    patterns[pattern_name]['count'] = len(patterns[pattern_name]['instances'])
+            else:
+                # Fallback to old format or empty dict
+                patterns = patterns_data
+            
+            pattern_count = sum(p['count'] for p in patterns.values()) if patterns else 0
+            logger.info(f"Loaded {len(patterns)} pattern types with {pattern_count} instances from {latest_file}")
+            
+            # Update cache time
+            self.last_update_time['analyzed'][depth] = datetime.now()
+            
+            return patterns
+            
+        except Exception as e:
+            logger.error(f"Error loading pattern data for {depth}: {str(e)}")
+            return None
+            
+    def _thread_safe_load_predictions(self, force=True):
+        """Thread-safe version of load_predictions that doesn't access session state."""
+        try:
+            # Find latest file
+            latest_file = self.find_latest_file(self.prediction_dir, '_predictions.json')
+            if latest_file is None:
+                return None
+                
+            # Check file modification time
+            last_modified = datetime.fromtimestamp(os.path.getmtime(latest_file))
+            if not force and self.last_update_time['predictions'] is not None:
+                if last_modified <= self.last_update_time['predictions']:
+                    # File hasn't changed
+                    return self.predictions
+            
+            logger.info(f"Loading predictions from {latest_file}")
+            with open(latest_file, 'r') as f:
+                predictions = json.load(f)
+            
+            logger.info(f"Loaded {len(predictions.get('predictions', []))} predictions from {latest_file}")
+            
+            # Update cache time
+            self.last_update_time['predictions'] = datetime.now()
+            
+            return predictions
+            
+        except Exception as e:
+            logger.error(f"Error loading predictions: {str(e)}")
+            return None
+            
+    def _thread_safe_load_performance(self, force=True):
+        """Thread-safe version of load_performance that doesn't access session state."""
+        try:
+            # Find latest file - FIXED: Use performance_dir instead of prediction_dir
+            latest_file = self.find_latest_file(self.performance_dir, '_performance.json')
+            if latest_file is None:
+                # Try for latest_performance.json format
+                latest_file = self.find_latest_file(self.performance_dir, 'latest_performance.json')
+                if latest_file is None:
+                    return None
+                
+            # Check file modification time
+            last_modified = datetime.fromtimestamp(os.path.getmtime(latest_file))
+            if not force and self.last_update_time['performance'] is not None:
+                if last_modified <= self.last_update_time['performance']:
+                    # File hasn't changed
+                    return self.performance
+            
+            logger.info(f"Loading performance metrics from {latest_file}")
+            with open(latest_file, 'r') as f:
+                performance = json.load(f)
+            
+            logger.info(f"Loaded performance metrics from {latest_file}")
+            
+            # Update cache time
+            self.last_update_time['performance'] = datetime.now()
+            
+            return performance
+            
+        except Exception as e:
+            logger.error(f"Error loading performance metrics: {str(e)}")
+            return None
+    
     def data_refresh_thread(self, interval_seconds=60):
         """
         Background thread to refresh data periodically.
+        
+        This thread loads data directly into session state without triggering
+        a full UI refresh. This prevents flickering by ensuring data is always
+        available without forcing reruns.
         """
         logger.info(f"Starting data refresh thread with {interval_seconds}s interval")
         
+        # Initial backoff to allow main thread to initialize
+        time.sleep(3)
+        
         while True:
             try:
-                # Load data
-                raw_data = self.load_raw_data(force=True)
+                # Track if any files have changed
+                files_updated = False
+                data_updated = False
+                
+                # Load raw data directly into instance variables using thread-safe methods
+                raw_data = self._thread_safe_load_raw_data(force=True)
                 if raw_data is not None:
-                    data_update_queue.put(('raw', True))
+                    # Update instance variable
+                    self.raw_data = raw_data
+                    files_updated = True
+                    data_updated = True
                 
+                # Load analyzed data and patterns for each depth
                 for depth in self.analyzed_data_dirs:
-                    analyzed_data = self.load_analyzed_data(depth, force=True)
+                    analyzed_data = self._thread_safe_load_analyzed_data(depth, force=True)
                     if analyzed_data is not None:
-                        data_update_queue.put(('analyzed', depth))
+                        self.analyzed_data[depth] = analyzed_data
+                        files_updated = True
+                        data_updated = True
                     
-                    pattern_data = self.load_pattern_data(depth, force=True)
+                    pattern_data = self._thread_safe_load_pattern_data(depth, force=True)
                     if pattern_data is not None:
-                        data_update_queue.put(('pattern', depth))
+                        self.pattern_data[depth] = pattern_data
+                        files_updated = True
+                        data_updated = True
                 
-                predictions = self.load_predictions(force=True)
+                # Load predictions
+                predictions = self._thread_safe_load_predictions(force=True)
                 if predictions is not None:
-                    data_update_queue.put(('predictions', True))
+                    self.predictions = predictions
+                    files_updated = True
+                    data_updated = True
                 
-                performance = self.load_performance(force=True)
+                # Load performance
+                performance = self._thread_safe_load_performance(force=True)
                 if performance is not None:
-                    data_update_queue.put(('performance', True))
+                    self.performance = performance
+                    files_updated = True
+                    data_updated = True
                 
-                # Signal UI refresh
-                data_update_queue.put(('refresh', True))
+                # If files were updated, but we couldn't update the data, just log it
+                if files_updated and not data_updated:
+                    logger.warning("Files were updated but data couldn't be loaded properly")
+                
+                # Only signal UI refresh if new data was loaded
+                if data_updated:
+                    # Log successful update
+                    logger.info("Data refresh thread updated data successfully")
+                    
+                    # Signal UI refresh 
+                    data_update_queue.put(('refresh', True))
+                else:
+                    logger.info("No new data found in refresh cycle")
                 
             except Exception as e:
                 logger.error(f"Error in data refresh thread: {str(e)}")
+                # Don't signal a refresh if there was an error
             
             # Wait for next refresh
             time.sleep(interval_seconds)
@@ -1047,15 +1484,142 @@ class ForexDashboard:
             initial_sidebar_state="expanded"
         )
         
+        # Add a placeholder at the top for loading indicators
+        load_placeholder = st.empty()
+        
+        # Initialize refresh control
+        if 'last_refresh_time' not in st.session_state:
+            st.session_state.last_refresh_time = datetime.now()
+            st.session_state.should_refresh = False
+            st.session_state.manual_refresh = False
+        
+        # Initialize session state for data persistence
+        if 'initialized' not in st.session_state:
+            with load_placeholder.container():
+                st.info("Loading dashboard data for the first time...")
+            
+            st.session_state.initialized = True
+            st.session_state.data_loaded = False
+            st.session_state.cached_data = {
+                'raw': None,
+                'analyzed': {
+                    'minimum': None,
+                    'recommended': None,
+                    'optimal': None
+                },
+                'patterns': {
+                    'minimum': None,
+                    'recommended': None,
+                    'optimal': None
+                },
+                'predictions': None,
+                'performance': None
+            }
+            
+            # Perform initial data loading to ensure the dashboard has data on first display
+            self.load_raw_data(force=True)
+            for depth in self.analyzed_data_dirs:
+                self.load_analyzed_data(depth, force=True)
+                self.load_pattern_data(depth, force=True)
+            self.load_predictions(force=True)
+            self.load_performance(force=True)
+            
+            # Mark data as loaded
+            st.session_state.data_loaded = True
+            logger.info("Initial data loading complete")
+        
+        # Clear loading indicator
+        load_placeholder.empty()
+        
+        # Anti-flickering: ensure we have data in cache before rendering UI
+        # If we don't have data, we should try to load it but avoid rerunning
+        if 'cached_data' not in st.session_state or not st.session_state.data_loaded:
+            logger.warning("Session state data missing - using instance data as fallback")
+            
+            # Emergency fallback - use the instance data
+            if not hasattr(st.session_state, 'cached_data'):
+                st.session_state.cached_data = {}
+                
+            # Use whatever data we have in the instance
+            if self.raw_data is not None and 'raw' not in st.session_state.cached_data:
+                st.session_state.cached_data['raw'] = self.raw_data
+                
+            if 'analyzed' not in st.session_state.cached_data:
+                st.session_state.cached_data['analyzed'] = {}
+            for depth, data in self.analyzed_data.items():
+                if data is not None:
+                    st.session_state.cached_data['analyzed'][depth] = data
+                    
+            if 'patterns' not in st.session_state.cached_data:
+                st.session_state.cached_data['patterns'] = {}
+            for depth, data in self.pattern_data.items():
+                if data is not None:
+                    st.session_state.cached_data['patterns'][depth] = data
+                    
+            if self.predictions is not None:
+                st.session_state.cached_data['predictions'] = self.predictions
+                
+            if self.performance is not None:
+                st.session_state.cached_data['performance'] = self.performance
+                
+            st.session_state.data_loaded = True
+            logger.info("Emergency fallback data loaded from instance")
+        
+        # Check if we need to copy instance data to session state - this avoids flickering
+        # by ensuring we always show "something" even during refresh
+        if self.raw_data is not None and st.session_state.cached_data['raw'] is None:
+            st.session_state.cached_data['raw'] = self.raw_data
+            
+        for depth, data in self.analyzed_data.items():
+            if data is not None and (depth not in st.session_state.cached_data['analyzed'] or st.session_state.cached_data['analyzed'][depth] is None):
+                st.session_state.cached_data['analyzed'][depth] = data
+                
+        for depth, data in self.pattern_data.items():
+            if data is not None and (depth not in st.session_state.cached_data['patterns'] or st.session_state.cached_data['patterns'][depth] is None):
+                st.session_state.cached_data['patterns'][depth] = data
+                
+        if self.predictions is not None and st.session_state.cached_data['predictions'] is None:
+            st.session_state.cached_data['predictions'] = self.predictions
+            
+        if self.performance is not None and st.session_state.cached_data['performance'] is None:
+            st.session_state.cached_data['performance'] = self.performance
+        
         # Sidebar
         with st.sidebar:
             st.title("Forex Pattern Dashboard")
             st.subheader(f"{self.symbol} - {self.timeframe}")
             
-            # Refresh button
-            if st.button("Refresh Data"):
-                # Force reload data
-                st.session_state.force_reload = True
+            # Refresh button and last update time
+            col1, col2 = st.columns([2, 1])
+            with col1:
+                # Create a more reliable refresh button with a key and container width
+                if st.button("↻ Refresh Dashboard", key="refresh_button_fixed", use_container_width=True):
+                    # Force an immediate refresh of all data
+                    self.load_raw_data(force=True)
+                    for depth in self.analyzed_data_dirs:
+                        self.load_analyzed_data(depth, force=True)
+                        self.load_pattern_data(depth, force=True)
+                    self.load_predictions(force=True)
+                    self.load_performance(force=True)
+                    
+                    # Update refresh timestamp
+                    st.session_state.last_refresh_time = datetime.now()
+                    
+                    # Update session state to indicate we've loaded data
+                    st.session_state.data_loaded = True
+                    
+                    # Show visual confirmation
+                    st.success("✓ Data refreshed!")
+            
+            # Show last refresh time and cache status
+            with col2:
+                if 'last_refresh_time' in st.session_state:
+                    time_str = st.session_state.last_refresh_time.strftime("%H:%M:%S")
+                    st.info(f"Last: {time_str}")
+                    
+            # Data status indicator
+            if st.session_state.data_loaded:
+                st.success("✓ Data cache active")
             
             # Data information
             st.subheader("Data Sources")
@@ -1389,14 +1953,32 @@ class ForexDashboard:
                             with dir_cols[i]:
                                 st.subheader(direction)
                                 
+                                # Handle both stats structures
+                                # Some files have win_rate at the top level, others have wins/losses/count
+                                win_rate = stats.get('win_rate', 0)
+                                # If win_rate not directly in stats, calculate it
+                                if win_rate == 0 and 'wins' in stats and 'count' in stats and stats['count'] > 0:
+                                    win_rate = stats['wins'] / stats['count']
+                                
+                                win_rate *= 100  # Convert to percentage
+                                
+                                # Get wins and losses
+                                wins = stats.get('wins', 0)
+                                losses = stats.get('losses', 0)
+                                
+                                # Get count
+                                count = stats.get('count', 0)
+                                if count == 0 and wins > 0 and losses > 0:
+                                    count = wins + losses
+                                
+                                # Display stats
                                 if direction != 'NEUTRAL':
-                                    win_rate = stats.get('win_rate', 0) * 100
                                     color = "green" if win_rate >= 60 else "orange" if win_rate >= 50 else "red"
                                     st.markdown(f"<div><p>Win Rate: <strong style='color: {color};'>{win_rate:.1f}%</strong></p></div>", unsafe_allow_html=True)
-                                    st.text(f"Wins: {stats.get('wins', 0)}")
-                                    st.text(f"Losses: {stats.get('losses', 0)}")
+                                    st.text(f"Wins: {wins}")
+                                    st.text(f"Losses: {losses}")
                                 
-                                st.text(f"Total: {stats.get('count', 0)}")
+                                st.text(f"Total: {count}")
                 
                 # By Depth
                 with tabs[1]:
@@ -1407,12 +1989,29 @@ class ForexDashboard:
                             with depth_cols[i]:
                                 st.subheader(depth.capitalize())
                                 
-                                win_rate = stats.get('win_rate', 0) * 100
+                                # Handle both stats structures
+                                win_rate = stats.get('win_rate', 0)
+                                # If win_rate not directly in stats, calculate it
+                                if win_rate == 0 and 'wins' in stats and 'count' in stats and stats['count'] > 0:
+                                    win_rate = stats['wins'] / stats['count']
+                                
+                                win_rate *= 100  # Convert to percentage
+                                
+                                # Get wins and losses
+                                wins = stats.get('wins', 0)
+                                losses = stats.get('losses', 0)
+                                
+                                # Get count
+                                count = stats.get('count', 0)
+                                if count == 0 and wins > 0 and losses > 0:
+                                    count = wins + losses
+                                
+                                # Display stats
                                 color = "green" if win_rate >= 60 else "orange" if win_rate >= 50 else "red"
                                 st.markdown(f"<div><p>Win Rate: <strong style='color: {color};'>{win_rate:.1f}%</strong></p></div>", unsafe_allow_html=True)
-                                st.text(f"Wins: {stats.get('wins', 0)}")
-                                st.text(f"Losses: {stats.get('losses', 0)}")
-                                st.text(f"Total: {stats.get('count', 0)}")
+                                st.text(f"Wins: {wins}")
+                                st.text(f"Losses: {losses}")
+                                st.text(f"Total: {count}")
                 
                 # By Method
                 with tabs[2]:
@@ -1423,12 +2022,29 @@ class ForexDashboard:
                             with method_cols[i]:
                                 st.subheader(method.replace('_', ' ').title())
                                 
-                                win_rate = stats.get('win_rate', 0) * 100
+                                # Handle both stats structures
+                                win_rate = stats.get('win_rate', 0)
+                                # If win_rate not directly in stats, calculate it
+                                if win_rate == 0 and 'wins' in stats and 'count' in stats and stats['count'] > 0:
+                                    win_rate = stats['wins'] / stats['count']
+                                
+                                win_rate *= 100  # Convert to percentage
+                                
+                                # Get wins and losses
+                                wins = stats.get('wins', 0)
+                                losses = stats.get('losses', 0)
+                                
+                                # Get count
+                                count = stats.get('count', 0)
+                                if count == 0 and wins > 0 and losses > 0:
+                                    count = wins + losses
+                                
+                                # Display stats
                                 color = "green" if win_rate >= 60 else "orange" if win_rate >= 50 else "red"
                                 st.markdown(f"<div><p>Win Rate: <strong style='color: {color};'>{win_rate:.1f}%</strong></p></div>", unsafe_allow_html=True)
-                                st.text(f"Wins: {stats.get('wins', 0)}")
-                                st.text(f"Losses: {stats.get('losses', 0)}")
-                                st.text(f"Total: {stats.get('count', 0)}")
+                                st.text(f"Wins: {wins}")
+                                st.text(f"Losses: {losses}")
+                                st.text(f"Total: {count}")
             else:
                 st.warning("No performance data available")
         
@@ -1436,22 +2052,84 @@ class ForexDashboard:
         st.markdown("---")
         st.markdown("Multi-Component Forex Pattern Prediction System")
         
-        # Check data updates
+        # Check data updates from background thread
+        refresh_signaled = False
         while not data_update_queue.empty():
             try:
                 update_type, update_data = data_update_queue.get_nowait()
                 if update_type == 'refresh':
-                    # This is just a signal to refresh the UI
-                    st.rerun()
+                    # Just set a flag, don't refresh immediately
+                    refresh_signaled = True
+                    logger.info("Refresh signal received from background thread")
             except queue.Empty:
                 break
         
-        # Auto-refresh every minute
-        if 'last_refresh' not in st.session_state:
-            st.session_state.last_refresh = datetime.now()
+        # Determine if we should actually refresh based on time since last refresh
+        # and whether a manual refresh was requested
+        current_time = datetime.now()
+        time_since_refresh = (current_time - st.session_state.last_refresh_time).total_seconds()
+        
+        # Check if user pressed the refresh button
+        if 'manual_refresh_clicked' in st.session_state and st.session_state.manual_refresh_clicked:
+            st.session_state.manual_refresh = True
+            st.session_state.manual_refresh_clicked = False  # Reset button state
+            logger.info("Manual refresh requested by user")
+        
+        # Determine if we should refresh
+        should_refresh = (
+            # Manual refresh requested
+            st.session_state.manual_refresh or
+            # Background thread signaled AND it's been at least 5 seconds since last refresh
+            (refresh_signaled and time_since_refresh > 5) or
+            # Auto refresh every 60 seconds
+            time_since_refresh > 60
+        )
+        
+        # Handle refresh if needed
+        if should_refresh and get_script_run_ctx() is not None:
+            logger.info(f"Refreshing dashboard (manual={st.session_state.manual_refresh}, "
+                       f"signaled={refresh_signaled}, elapsed={time_since_refresh:.1f}s)")
             
-        if (datetime.now() - st.session_state.last_refresh).total_seconds() > 60:
-            st.session_state.last_refresh = datetime.now()
+            # Update refresh timestamp
+            st.session_state.last_refresh_time = current_time
+            
+            # Reset manual refresh flag
+            st.session_state.manual_refresh = False
+            
+            # Quietly update session state with latest data (without rerun)
+            # This avoids flickering by updating session state before rerun
+            if self.raw_data is not None:
+                st.session_state.cached_data['raw'] = self.raw_data
+            
+            for depth in self.analyzed_data_dirs:
+                if self.analyzed_data[depth] is not None:
+                    if 'analyzed' not in st.session_state.cached_data:
+                        st.session_state.cached_data['analyzed'] = {}
+                    st.session_state.cached_data['analyzed'][depth] = self.analyzed_data[depth]
+                
+                if self.pattern_data[depth] is not None:
+                    if 'patterns' not in st.session_state.cached_data:
+                        st.session_state.cached_data['patterns'] = {}
+                    st.session_state.cached_data['patterns'][depth] = self.pattern_data[depth]
+            
+            if self.predictions is not None:
+                st.session_state.cached_data['predictions'] = self.predictions
+            
+            if self.performance is not None:
+                st.session_state.cached_data['performance'] = self.performance
+            
+            # Mark data as loaded
+            st.session_state.data_loaded = True
+            
+            # Add a small visual indicator that refresh is happening
+            refresh_indicator = st.empty()
+            with refresh_indicator.container():
+                with st.spinner("Refreshing..."):
+                    # Small delay so the spinner is visible but not distracting
+                    time.sleep(0.3)
+                refresh_indicator.empty()
+            
+            # Use rerun to update the UI with the latest data
             st.rerun()
 
 def hex_to_rgb(hex_color):

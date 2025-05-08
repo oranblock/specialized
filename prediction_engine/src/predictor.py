@@ -641,13 +641,58 @@ class ForexPredictionEngine:
             # Run prediction with each model
             for model_type, model in self.ml_models.items():
                 try:
-                    # Prepare features
+                    # FEATURE ADAPTER: Adapt features to match model expectations
+                    
+                    # Base features: numerical features that exist in the data
                     X = latest.select_dtypes(include=[np.number]).dropna(axis=1)
                     
                     # Remove target columns if they exist
-                    for col in ['spike', 'direction', 'pattern_signal']:
+                    for col in ['spike', 'direction']:
                         if col in X.columns:
                             X = X.drop(columns=[col])
+                    
+                    # Try to determine required features for this model
+                    required_features = []
+                    
+                    # XGBoost models
+                    if hasattr(model, 'feature_names_in_'):
+                        required_features = model.feature_names_in_
+                    # Random Forest models
+                    elif hasattr(model, 'feature_names'):
+                        required_features = model.feature_names
+                    # Older scikit-learn models
+                    elif hasattr(model, 'feature_importances_') and model_type in ['random_forest', 'xgboost']:
+                        # We can't know the exact features, but assuming the model needs all numerical features
+                        logger.info(f"No feature names found for {model_type}, using available numerical features")
+                        
+                    # If we know the required features, adapt data to match
+                    if len(required_features) > 0:
+                        logger.info(f"Adapting features for {model_type} model")
+                        
+                        # Create a new DataFrame with zeros for all required features
+                        adapted_X = pd.DataFrame(0, index=X.index, columns=required_features)
+                        
+                        # Fill in the values that we have
+                        for col in X.columns:
+                            if col in required_features:
+                                adapted_X[col] = X[col]
+                                
+                        # Add any additional features needed
+                        # Simple price-based features
+                        if 'candle_range' in required_features and 'candle_range' not in X.columns:
+                            if all(col in X.columns for col in ['high', 'low']):
+                                adapted_X['candle_range'] = X['high'] - X['low']
+                        
+                        if 'body_size' in required_features and 'body_size' not in X.columns:
+                            if all(col in X.columns for col in ['open', 'close']):
+                                adapted_X['body_size'] = abs(X['close'] - X['open'])
+                            
+                        if 'body_percent' in required_features and 'body_percent' not in X.columns:
+                            if all(col in X.columns for col in ['open', 'close']):
+                                adapted_X['body_percent'] = abs(X['close'] - X['open']) / X['open'] * 100
+                        
+                        # Use adapted features
+                        X = adapted_X
                     
                     # Make prediction
                     prediction = model.predict(X)[0]
