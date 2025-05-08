@@ -1,0 +1,9 @@
+{
+  "symbol": "EUR_USD",
+  "timeframe": "5m",
+  "collection_start": "2025-05-07T17:29:46.528748",
+  "collection_end": "2025-05-07T17:35:07.633384",
+  "duration_seconds": 321.104636,
+  "request_count": 53,
+  "error_count": 0
+}

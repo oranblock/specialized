@@ -1,0 +1,229 @@
+2025-05-08 06:52:39,720 - DataAnalyzer - INFO - Initialized data analyzer for EUR_USD with 5m timeframe
+2025-05-08 06:52:39,720 - DataAnalyzer - INFO - Raw data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw
+2025-05-08 06:52:39,720 - DataAnalyzer - INFO - Analysis output directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed
+2025-05-08 06:52:39,720 - DataAnalyzer - INFO - Candle counts for analysis depths: {<AnalysisDepth.MINIMUM: 'minimum'>: 26, <AnalysisDepth.RECOMMENDED: 'recommended'>: 50, <AnalysisDepth.OPTIMAL: 'optimal'>: 100}
+2025-05-08 06:52:39,721 - DataAnalyzer - INFO - Starting analysis loop at 300s intervals
+2025-05-08 06:52:39,721 - DataAnalyzer - INFO - Analysis run #1
+2025-05-08 06:52:39,722 - DataAnalyzer - INFO - Found latest raw data file: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:52:39,722 - DataAnalyzer - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:52:39,747 - DataAnalyzer - INFO - Loaded 1706 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:52:39,747 - DataAnalyzer - INFO - Analyzing data at minimum depth
+2025-05-08 06:52:39,748 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 06:52:39,756 - DataAnalyzer - INFO - Added 18 basic indicators
+2025-05-08 06:52:39,757 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 06:52:39,769 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 06:52:39,780 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 06:52:39,783 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv
+2025-05-08 06:52:39,784 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json
+2025-05-08 06:52:39,784 - DataAnalyzer - INFO - Analyzing data at recommended depth
+2025-05-08 06:52:39,784 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 06:52:39,787 - DataAnalyzer - INFO - Added 20 basic indicators
+2025-05-08 06:52:39,787 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 06:52:39,793 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 06:52:39,799 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 06:52:39,801 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv
+2025-05-08 06:52:39,801 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json
+2025-05-08 06:52:39,801 - DataAnalyzer - INFO - Analyzing data at optimal depth
+2025-05-08 06:52:39,801 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 06:52:39,804 - DataAnalyzer - INFO - Added 22 basic indicators
+2025-05-08 06:52:39,804 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 06:52:39,810 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 06:52:39,810 - DataAnalyzer - INFO - Adding advanced technical indicators
+2025-05-08 06:52:39,816 - DataAnalyzer - INFO - Added 9 advanced indicators
+2025-05-08 06:52:39,821 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 06:52:39,825 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv
+2025-05-08 06:52:39,825 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json
+2025-05-08 06:52:39,825 - DataAnalyzer - INFO - Analysis complete with results: {'minimum': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json', 'candle_count': 26, 'indicator_count': 36, 'pattern_count': 16}, 'recommended': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json', 'candle_count': 50, 'indicator_count': 39, 'pattern_count': 40}, 'optimal': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json', 'candle_count': 100, 'indicator_count': 49, 'pattern_count': 90}}
+2025-05-08 06:52:39,825 - DataAnalyzer - INFO - Waiting 300s until next analysis run
+2025-05-08 06:57:39,826 - DataAnalyzer - INFO - Analysis run #2
+2025-05-08 06:57:39,833 - DataAnalyzer - INFO - Found latest raw data file: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:57:39,834 - DataAnalyzer - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:57:39,844 - DataAnalyzer - INFO - Loaded 1956 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:57:39,844 - DataAnalyzer - INFO - Analyzing data at minimum depth
+2025-05-08 06:57:39,844 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 06:57:39,850 - DataAnalyzer - INFO - Added 18 basic indicators
+2025-05-08 06:57:39,850 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 06:57:39,858 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 06:57:39,863 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 06:57:39,866 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv
+2025-05-08 06:57:39,866 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json
+2025-05-08 06:57:39,866 - DataAnalyzer - INFO - Analyzing data at recommended depth
+2025-05-08 06:57:39,866 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 06:57:39,869 - DataAnalyzer - INFO - Added 20 basic indicators
+2025-05-08 06:57:39,869 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 06:57:39,875 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 06:57:39,881 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 06:57:39,883 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv
+2025-05-08 06:57:39,883 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json
+2025-05-08 06:57:39,883 - DataAnalyzer - INFO - Analyzing data at optimal depth
+2025-05-08 06:57:39,884 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 06:57:39,887 - DataAnalyzer - INFO - Added 22 basic indicators
+2025-05-08 06:57:39,887 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 06:57:39,893 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 06:57:39,893 - DataAnalyzer - INFO - Adding advanced technical indicators
+2025-05-08 06:57:39,898 - DataAnalyzer - INFO - Added 9 advanced indicators
+2025-05-08 06:57:39,904 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 06:57:39,910 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv
+2025-05-08 06:57:39,912 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json
+2025-05-08 06:57:39,913 - DataAnalyzer - INFO - Analysis complete with results: {'minimum': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json', 'candle_count': 26, 'indicator_count': 36, 'pattern_count': 16}, 'recommended': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json', 'candle_count': 50, 'indicator_count': 39, 'pattern_count': 40}, 'optimal': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json', 'candle_count': 100, 'indicator_count': 49, 'pattern_count': 90}}
+2025-05-08 06:57:39,913 - DataAnalyzer - INFO - Waiting 300s until next analysis run
+2025-05-08 07:02:39,913 - DataAnalyzer - INFO - Analysis run #3
+2025-05-08 07:02:39,920 - DataAnalyzer - INFO - Found latest raw data file: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:02:39,920 - DataAnalyzer - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:02:39,929 - DataAnalyzer - INFO - Loaded 2250 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:02:39,930 - DataAnalyzer - INFO - Analyzing data at minimum depth
+2025-05-08 07:02:39,930 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:02:39,935 - DataAnalyzer - INFO - Added 18 basic indicators
+2025-05-08 07:02:39,935 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:02:39,946 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:02:39,956 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:02:39,958 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv
+2025-05-08 07:02:39,959 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json
+2025-05-08 07:02:39,959 - DataAnalyzer - INFO - Analyzing data at recommended depth
+2025-05-08 07:02:39,959 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:02:39,962 - DataAnalyzer - INFO - Added 20 basic indicators
+2025-05-08 07:02:39,962 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:02:39,968 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:02:39,974 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:02:39,976 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv
+2025-05-08 07:02:39,977 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json
+2025-05-08 07:02:39,977 - DataAnalyzer - INFO - Analyzing data at optimal depth
+2025-05-08 07:02:39,977 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:02:39,980 - DataAnalyzer - INFO - Added 22 basic indicators
+2025-05-08 07:02:39,980 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:02:39,986 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:02:39,986 - DataAnalyzer - INFO - Adding advanced technical indicators
+2025-05-08 07:02:39,992 - DataAnalyzer - INFO - Added 9 advanced indicators
+2025-05-08 07:02:39,997 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:02:40,002 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv
+2025-05-08 07:02:40,002 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json
+2025-05-08 07:02:40,002 - DataAnalyzer - INFO - Analysis complete with results: {'minimum': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json', 'candle_count': 26, 'indicator_count': 36, 'pattern_count': 16}, 'recommended': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json', 'candle_count': 50, 'indicator_count': 39, 'pattern_count': 40}, 'optimal': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json', 'candle_count': 100, 'indicator_count': 49, 'pattern_count': 90}}
+2025-05-08 07:02:40,002 - DataAnalyzer - INFO - Waiting 300s until next analysis run
+2025-05-08 07:07:40,004 - DataAnalyzer - INFO - Analysis run #4
+2025-05-08 07:07:40,009 - DataAnalyzer - INFO - Found latest raw data file: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:07:40,009 - DataAnalyzer - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:07:40,026 - DataAnalyzer - INFO - Loaded 2587 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:07:40,026 - DataAnalyzer - INFO - Analyzing data at minimum depth
+2025-05-08 07:07:40,027 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:07:40,032 - DataAnalyzer - INFO - Added 18 basic indicators
+2025-05-08 07:07:40,033 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:07:40,044 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:07:40,054 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:07:40,057 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv
+2025-05-08 07:07:40,057 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json
+2025-05-08 07:07:40,057 - DataAnalyzer - INFO - Analyzing data at recommended depth
+2025-05-08 07:07:40,057 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:07:40,063 - DataAnalyzer - INFO - Added 20 basic indicators
+2025-05-08 07:07:40,063 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:07:40,074 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:07:40,081 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:07:40,084 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv
+2025-05-08 07:07:40,084 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json
+2025-05-08 07:07:40,084 - DataAnalyzer - INFO - Analyzing data at optimal depth
+2025-05-08 07:07:40,085 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:07:40,088 - DataAnalyzer - INFO - Added 22 basic indicators
+2025-05-08 07:07:40,088 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:07:40,094 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:07:40,094 - DataAnalyzer - INFO - Adding advanced technical indicators
+2025-05-08 07:07:40,099 - DataAnalyzer - INFO - Added 9 advanced indicators
+2025-05-08 07:07:40,105 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:07:40,109 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv
+2025-05-08 07:07:40,109 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json
+2025-05-08 07:07:40,110 - DataAnalyzer - INFO - Analysis complete with results: {'minimum': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json', 'candle_count': 26, 'indicator_count': 36, 'pattern_count': 16}, 'recommended': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json', 'candle_count': 50, 'indicator_count': 39, 'pattern_count': 40}, 'optimal': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json', 'candle_count': 100, 'indicator_count': 49, 'pattern_count': 90}}
+2025-05-08 07:07:40,110 - DataAnalyzer - INFO - Waiting 300s until next analysis run
+2025-05-08 07:18:17,914 - DataAnalyzer - INFO - Analysis run #5
+2025-05-08 07:18:17,920 - DataAnalyzer - INFO - Found latest raw data file: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:18:17,920 - DataAnalyzer - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:18:17,941 - DataAnalyzer - INFO - Loaded 2942 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:18:23,633 - DataAnalyzer - INFO - Analyzing data at minimum depth
+2025-05-08 07:18:23,634 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:18:23,648 - DataAnalyzer - INFO - Added 18 basic indicators
+2025-05-08 07:18:23,649 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:18:23,661 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:18:23,671 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:18:23,674 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv
+2025-05-08 07:18:23,678 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json
+2025-05-08 07:18:23,678 - DataAnalyzer - INFO - Analyzing data at recommended depth
+2025-05-08 07:18:23,679 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:18:23,684 - DataAnalyzer - INFO - Added 20 basic indicators
+2025-05-08 07:18:23,684 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:18:23,696 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:18:23,706 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:18:23,709 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv
+2025-05-08 07:18:23,709 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json
+2025-05-08 07:18:23,709 - DataAnalyzer - INFO - Analyzing data at optimal depth
+2025-05-08 07:18:23,709 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:18:23,713 - DataAnalyzer - INFO - Added 22 basic indicators
+2025-05-08 07:18:23,713 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:18:23,719 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:18:23,719 - DataAnalyzer - INFO - Adding advanced technical indicators
+2025-05-08 07:18:23,724 - DataAnalyzer - INFO - Added 9 advanced indicators
+2025-05-08 07:18:23,730 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:18:23,734 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv
+2025-05-08 07:18:23,734 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json
+2025-05-08 07:18:23,735 - DataAnalyzer - INFO - Analysis complete with results: {'minimum': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json', 'candle_count': 26, 'indicator_count': 36, 'pattern_count': 16}, 'recommended': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json', 'candle_count': 50, 'indicator_count': 39, 'pattern_count': 40}, 'optimal': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json', 'candle_count': 100, 'indicator_count': 49, 'pattern_count': 90}}
+2025-05-08 07:18:23,735 - DataAnalyzer - INFO - Waiting 300s until next analysis run
+2025-05-08 07:23:46,516 - DataAnalyzer - INFO - Analysis run #6
+2025-05-08 07:23:46,523 - DataAnalyzer - INFO - Found latest raw data file: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:23:46,524 - DataAnalyzer - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:23:46,550 - DataAnalyzer - INFO - Loaded 3147 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:23:46,550 - DataAnalyzer - INFO - Analyzing data at minimum depth
+2025-05-08 07:23:46,550 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:23:46,560 - DataAnalyzer - INFO - Added 18 basic indicators
+2025-05-08 07:23:46,560 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:23:46,573 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:23:46,583 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:23:46,589 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv
+2025-05-08 07:23:46,724 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json
+2025-05-08 07:23:46,724 - DataAnalyzer - INFO - Analyzing data at recommended depth
+2025-05-08 07:23:46,725 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:23:46,732 - DataAnalyzer - INFO - Added 20 basic indicators
+2025-05-08 07:23:46,733 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:23:46,747 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:23:46,759 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:23:46,762 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv
+2025-05-08 07:23:46,763 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json
+2025-05-08 07:23:46,763 - DataAnalyzer - INFO - Analyzing data at optimal depth
+2025-05-08 07:23:46,763 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:23:46,768 - DataAnalyzer - INFO - Added 22 basic indicators
+2025-05-08 07:23:46,768 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:23:46,780 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:23:46,780 - DataAnalyzer - INFO - Adding advanced technical indicators
+2025-05-08 07:23:46,789 - DataAnalyzer - INFO - Added 9 advanced indicators
+2025-05-08 07:23:46,794 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:23:46,799 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv
+2025-05-08 07:23:46,799 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json
+2025-05-08 07:23:46,799 - DataAnalyzer - INFO - Analysis complete with results: {'minimum': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json', 'candle_count': 26, 'indicator_count': 36, 'pattern_count': 16}, 'recommended': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json', 'candle_count': 50, 'indicator_count': 39, 'pattern_count': 40}, 'optimal': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json', 'candle_count': 100, 'indicator_count': 49, 'pattern_count': 90}}
+2025-05-08 07:23:46,800 - DataAnalyzer - INFO - Waiting 300s until next analysis run
+2025-05-08 07:30:52,529 - DataAnalyzer - INFO - Analysis run #7
+2025-05-08 07:30:52,533 - DataAnalyzer - INFO - Found latest raw data file: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:30:52,533 - DataAnalyzer - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:30:52,568 - DataAnalyzer - INFO - Loaded 3680 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 07:30:52,569 - DataAnalyzer - INFO - Analyzing data at minimum depth
+2025-05-08 07:30:52,569 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:30:52,576 - DataAnalyzer - INFO - Added 18 basic indicators
+2025-05-08 07:30:52,576 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:30:52,585 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:30:52,591 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:30:52,595 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv
+2025-05-08 07:30:52,596 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json
+2025-05-08 07:30:52,596 - DataAnalyzer - INFO - Analyzing data at recommended depth
+2025-05-08 07:30:52,596 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:30:52,600 - DataAnalyzer - INFO - Added 20 basic indicators
+2025-05-08 07:30:52,600 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:30:52,606 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:30:52,613 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:30:52,616 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv
+2025-05-08 07:30:52,616 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json
+2025-05-08 07:30:52,616 - DataAnalyzer - INFO - Analyzing data at optimal depth
+2025-05-08 07:30:52,616 - DataAnalyzer - INFO - Calculating basic technical indicators
+2025-05-08 07:30:52,619 - DataAnalyzer - INFO - Added 22 basic indicators
+2025-05-08 07:30:52,619 - DataAnalyzer - INFO - Adding candlestick pattern recognition
+2025-05-08 07:30:52,626 - DataAnalyzer - INFO - Added 15 candlestick pattern columns
+2025-05-08 07:30:52,626 - DataAnalyzer - INFO - Adding advanced technical indicators
+2025-05-08 07:30:52,632 - DataAnalyzer - INFO - Added 9 advanced indicators
+2025-05-08 07:30:52,638 - DataAnalyzer - INFO - Added dummy pattern instance to ensure dashboard rendering
+2025-05-08 07:30:52,643 - DataAnalyzer - INFO - Saved analyzed data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv
+2025-05-08 07:30:52,643 - DataAnalyzer - INFO - Saved pattern data to /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json
+2025-05-08 07:30:52,643 - DataAnalyzer - INFO - Analysis complete with results: {'minimum': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/20250508_EUR_USD_5m_minimum_patterns.json', 'candle_count': 26, 'indicator_count': 36, 'pattern_count': 16}, 'recommended': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/20250508_EUR_USD_5m_recommended_patterns.json', 'candle_count': 50, 'indicator_count': 39, 'pattern_count': 40}, 'optimal': {'analyzed_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_analyzed.csv', 'pattern_file': '/home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/20250508_EUR_USD_5m_optimal_patterns.json', 'candle_count': 100, 'indicator_count': 49, 'pattern_count': 90}}
+2025-05-08 07:30:52,643 - DataAnalyzer - INFO - Waiting 300s until next analysis run

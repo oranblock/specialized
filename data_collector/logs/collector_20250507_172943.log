@@ -1,0 +1,14 @@
+2025-05-07 17:29:46,528 - DataCollector - INFO - Initialized data collector for EUR_USD with 5m timeframe
+2025-05-07 17:29:46,528 - DataCollector - INFO - Data will be stored in /home/clouduser/spike/forex_spike_predictor/specialized/data/raw
+2025-05-07 17:29:46,528 - DataCollector - INFO - Starting data collection for EUR_USD at 5s intervals
+2025-05-07 17:30:42,421 - DataCollector - INFO - Collected 10 data points
+2025-05-07 17:31:41,395 - DataCollector - INFO - Collected 20 data points
+2025-05-07 17:32:46,448 - DataCollector - INFO - Collected 30 data points
+2025-05-07 17:33:50,525 - DataCollector - INFO - Collected 40 data points
+2025-05-07 17:34:48,612 - DataCollector - INFO - Collected 50 data points
+2025-05-07 17:34:48,637 - DataCollector - INFO - Saved 50 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250507_EUR_USD_5m.csv
+2025-05-07 17:35:07,628 - DataCollector - INFO - Received signal 15, shutting down...
+2025-05-07 17:35:07,628 - DataCollector - INFO - Shutting down data collector...
+2025-05-07 17:35:07,633 - DataCollector - INFO - Saved 3 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250507_EUR_USD_5m.csv
+2025-05-07 17:35:07,634 - DataCollector - INFO - Data collection completed in 321.1s
+2025-05-07 17:35:07,634 - DataCollector - INFO - Made 53 API requests with 0 errors

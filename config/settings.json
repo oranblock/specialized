@@ -1,0 +1,66 @@
+{
+  "polygon_api_key": "p6WersYkAHkp9TccmLHvdDwGaZ4CnR0Y",
+  "currency_pairs": ["EUR/USD", "GBP/USD", "USD/JPY", "AUD/USD"],
+  
+  "data_collector": {
+    "collection_interval_seconds": 60,
+    "reconnection_max_attempts": 5,
+    "reconnection_backoff_factor": 2,
+    "initial_backoff_seconds": 1,
+    "max_backoff_seconds": 60,
+    "data_cache_size": 1000,
+    "save_interval_seconds": 300
+  },
+  
+  "data_analyzer": {
+    "analysis_interval_seconds": 300,
+    "analysis_depths": {
+      "minimum": {
+        "candles_required": 26,
+        "timeframe_hours": 2,
+        "indicators": ["sma", "ema", "macd", "rsi"]
+      },
+      "recommended": {
+        "candles_required": 50,
+        "timeframe_hours": 4,
+        "indicators": ["sma", "ema", "macd", "rsi", "bbands", "stoch", "cci"]
+      },
+      "optimal": {
+        "candles_required": 100,
+        "timeframe_hours": 8,
+        "indicators": ["sma", "ema", "macd", "rsi", "bbands", "stoch", "cci", "atr", "adx", "ichimoku"]
+      }
+    }
+  },
+  
+  "prediction_engine": {
+    "prediction_interval_seconds": 600,
+    "pip_target_default": 15,
+    "risk_reward_ratio": 2.0,
+    "prediction_methods": ["technical", "pattern", "ensemble"],
+    "performance_tracking_window": 100,
+    "confidence_threshold": 0.7
+  },
+  
+  "dashboard": {
+    "refresh_interval_seconds": 60,
+    "chart_candles_display": 50,
+    "default_analysis_depth": "recommended",
+    "enable_animation": true,
+    "theme": "dark",
+    "enable_performance_metrics": true
+  },
+  
+  "paths": {
+    "shared_data": "/home/clouduser/spike/forex_spike_predictor/specialized/shared_data",
+    "models": "/home/clouduser/spike/forex_spike_predictor/specialized/prediction_engine/models",
+    "logs": "/home/clouduser/spike/forex_spike_predictor/specialized/logs"
+  },
+  
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file_rotation_size_mb": 10,
+    "max_log_files": 5
+  }
+}

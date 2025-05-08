@@ -1,0 +1,30 @@
+2025-05-07 17:52:58,106 - DataAnalyzer - INFO - Initialized data analyzer for EUR_USD with 5m timeframe
+2025-05-07 17:52:58,107 - DataAnalyzer - INFO - Raw data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw
+2025-05-07 17:52:58,107 - DataAnalyzer - INFO - Analysis output directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed
+2025-05-07 17:52:58,107 - DataAnalyzer - INFO - Candle counts for analysis depths: {<AnalysisDepth.MINIMUM: 'minimum'>: 26, <AnalysisDepth.RECOMMENDED: 'recommended'>: 50, <AnalysisDepth.OPTIMAL: 'optimal'>: 100}
+2025-05-07 17:52:58,108 - DataAnalyzer - INFO - Found latest raw data file: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:52:58,108 - DataAnalyzer - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:52:58,127 - DataAnalyzer - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:52:58,127 - DataAnalyzer - INFO - Analyzing data at minimum depth
+2025-05-07 17:52:58,127 - DataAnalyzer - WARNING - Not enough data for minimum analysis. Need 26 candles, have 7.
+2025-05-07 17:52:58,127 - DataAnalyzer - INFO - Analyzing data at recommended depth
+2025-05-07 17:52:58,127 - DataAnalyzer - WARNING - Not enough data for recommended analysis. Need 50 candles, have 7.
+2025-05-07 17:52:58,127 - DataAnalyzer - INFO - Analyzing data at optimal depth
+2025-05-07 17:52:58,127 - DataAnalyzer - WARNING - Not enough data for optimal analysis. Need 100 candles, have 7.
+{
+  "minimum": {
+    "error": "Not enough data",
+    "required": 26,
+    "available": 7
+  },
+  "recommended": {
+    "error": "Not enough data",
+    "required": 50,
+    "available": 7
+  },
+  "optimal": {
+    "error": "Not enough data",
+    "required": 100,
+    "available": 7
+  }
+}

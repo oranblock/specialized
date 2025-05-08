@@ -1,0 +1,74 @@
+{
+  "doji": {
+    "count": 90,
+    "instances": [
+      {
+        "index": 99,
+        "timestamp": "2025-05-08T07:30:35.513637",
+        "type": "bullish",
+        "open": 1.128795,
+        "high": 1.128795,
+        "low": 1.128795,
+        "close": 1.128795,
+        "value": 1,
+        "strength": 0.5
+      }
+    ]
+  },
+  "hammer": {
+    "count": 0,
+    "instances": []
+  },
+  "hanging_man": {
+    "count": 0,
+    "instances": []
+  },
+  "engulfing": {
+    "count": 0,
+    "instances": []
+  },
+  "evening_star": {
+    "count": 0,
+    "instances": []
+  },
+  "morning_star": {
+    "count": 0,
+    "instances": []
+  },
+  "shooting_star": {
+    "count": 0,
+    "instances": []
+  },
+  "inverted_hammer": {
+    "count": 0,
+    "instances": []
+  },
+  "harami": {
+    "count": 0,
+    "instances": []
+  },
+  "three_outside": {
+    "count": 0,
+    "instances": []
+  },
+  "three_inside": {
+    "count": 0,
+    "instances": []
+  },
+  "dark_cloud_cover": {
+    "count": 0,
+    "instances": []
+  },
+  "piercing": {
+    "count": 0,
+    "instances": []
+  },
+  "spinning_top": {
+    "count": 0,
+    "instances": []
+  },
+  "marubozu": {
+    "count": 0,
+    "instances": []
+  }
+}

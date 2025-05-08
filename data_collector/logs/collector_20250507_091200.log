@@ -1,0 +1,4 @@
+usage: collector.py [-h] --api-key API_KEY [--symbol SYMBOL]
+                    [--timeframe TIMEFRAME] [--interval INTERVAL]
+                    [--data-dir DATA_DIR] [--runtime RUNTIME]
+collector.py: error: the following arguments are required: --api-key

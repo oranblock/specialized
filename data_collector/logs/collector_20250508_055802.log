@@ -1,0 +1,22 @@
+2025-05-08 05:58:04,017 - DataCollector - INFO - Initialized data collector for EUR_USD with 5m timeframe
+2025-05-08 05:58:04,017 - DataCollector - INFO - Data will be stored in /home/clouduser/spike/forex_spike_predictor/specialized/data/raw
+2025-05-08 05:58:04,017 - DataCollector - INFO - Starting data collection for EUR_USD at 5s intervals
+2025-05-08 05:58:59,667 - DataCollector - INFO - Collected 10 data points
+2025-05-08 06:00:01,167 - DataCollector - INFO - Collected 20 data points
+2025-05-08 06:01:01,808 - DataCollector - INFO - Collected 30 data points
+2025-05-08 06:02:03,612 - DataCollector - INFO - Collected 40 data points
+2025-05-08 06:03:05,088 - DataCollector - INFO - Collected 50 data points
+2025-05-08 06:03:05,104 - DataCollector - INFO - Saved 50 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 06:04:07,769 - DataCollector - INFO - Collected 10 data points
+2025-05-08 06:05:14,944 - DataCollector - INFO - Collected 20 data points
+2025-05-08 06:06:20,480 - DataCollector - INFO - Collected 30 data points
+2025-05-08 06:07:23,246 - DataCollector - INFO - Collected 40 data points
+2025-05-08 06:08:05,729 - DataCollector - INFO - Saved 47 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 06:09:06,158 - DataCollector - INFO - Collected 10 data points
+2025-05-08 06:10:08,379 - DataCollector - INFO - Collected 20 data points
+2025-05-08 06:11:09,292 - DataCollector - INFO - Collected 30 data points
+2025-05-08 06:12:09,764 - DataCollector - INFO - Collected 40 data points
+2025-05-08 06:13:06,894 - DataCollector - INFO - Saved 49 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 06:14:08,759 - DataCollector - INFO - Collected 10 data points
+2025-05-08 06:15:09,886 - DataCollector - INFO - Collected 20 data points
+2025-05-08 06:16:10,152 - DataCollector - INFO - Collected 30 data points

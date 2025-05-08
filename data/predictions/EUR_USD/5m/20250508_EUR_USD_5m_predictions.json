@@ -1,0 +1,2668 @@
+{
+  "symbol": "EUR_USD",
+  "timeframe": "5m",
+  "last_update": "2025-05-08T07:30:53.829115",
+  "count": 76,
+  "predictions": [
+    {
+      "timestamp": "2025-05-08T05:39:55.761572",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.078,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.7310000000000001,
+      "pip_target": 0.0,
+      "take_profit": 0.0,
+      "stop_loss": 0.0,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.7310000000000001,
+          "weight": 1.0
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.7310000000000001,
+          "DOWN": 0,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T05:41:33.859910",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130675,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.130675,
+      "stop_loss": 1.130675,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T05:44:27.831093",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130675,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.130675,
+      "stop_loss": 1.130675,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T05:46:29.836921",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130435,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.130435,
+      "stop_loss": 1.130435,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T05:47:43.503013",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130435,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.130435,
+      "stop_loss": 1.130435,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T05:50:20.670406",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130435,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.130435,
+      "stop_loss": 1.130435,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T05:53:06.657887",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130245,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.130245,
+      "stop_loss": 1.130245,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T05:57:02.243975",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.129755,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.129755,
+      "stop_loss": 1.129755,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T05:59:57.054764",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.129755,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.129755,
+      "stop_loss": 1.129755,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:01:37.387241",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.129755,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.129755,
+      "stop_loss": 1.129755,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:02:02.260575",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.129755,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.129755,
+      "stop_loss": 1.129755,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:04:57.070632",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130575,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.3831636912866461,
+      "pip_target": 0.8261962012090933,
+      "take_profit": 1.130657619620121,
+      "stop_loss": 1.1305171662659155,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.7184319211624615,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.3831636912866461,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:06:37.408127",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.13055,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.347610406965824,
+      "pip_target": 0.7072596330047816,
+      "take_profit": 1.1304792740366996,
+      "stop_loss": 1.1305995081743103,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.65176951306092,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.347610406965824,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:07:02.287118",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130435,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.130435,
+      "stop_loss": 1.130435,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:08:13.907343",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130275,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.3857565156618308,
+      "pip_target": 0.6326223128739583,
+      "take_profit": 1.1302117377687124,
+      "stop_loss": 1.1303192835619011,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.7232934668659328,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.3857565156618308,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:09:57.099634",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130275,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.36975651566183076,
+      "pip_target": 0.6326223128739583,
+      "take_profit": 1.1302117377687124,
+      "stop_loss": 1.1303192835619011,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6932934668659327,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.36975651566183076,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:11:37.432804",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130325,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.34893309209358114,
+      "pip_target": 0.5150773246281632,
+      "take_profit": 1.1303765077324628,
+      "stop_loss": 1.1302889445872761,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.6542495476754646,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34893309209358114,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:12:02.315207",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.130025,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.32077299932271364,
+      "pip_target": 0.812525668180811,
+      "take_profit": 1.129943747433182,
+      "stop_loss": 1.1300818767967726,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6014493737300881,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.32077299932271364,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:13:13.920339",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.129645,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.129645,
+      "stop_loss": 1.129645,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:14:23.565177",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.12976,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.12976,
+      "stop_loss": 1.12976,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:14:57.126068",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.12976,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.12976,
+      "stop_loss": 1.12976,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:29:50.024138",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.129585,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.4591941008670765,
+      "pip_target": 0.4515773742018845,
+      "take_profit": 1.12953984226258,
+      "stop_loss": 1.1296166104161942,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.8609889391257685,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.4591941008670765,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:34:50.037277",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128095,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.128095,
+      "stop_loss": 1.128095,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:38:45.748694",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128095,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.128095,
+      "stop_loss": 1.128095,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:39:50.052515",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128095,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.128095,
+      "stop_loss": 1.128095,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:43:45.772058",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128025,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.128025,
+      "stop_loss": 1.128025,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:44:50.075148",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127735,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.4446673816212076,
+      "pip_target": 1.1466443311075294,
+      "take_profit": 1.1276203355668892,
+      "stop_loss": 1.1278152651031774,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.8337513405397643,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.4446673816212076,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:45:39.582967",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127915,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.3682889122874144,
+      "pip_target": 0.7718226860772535,
+      "take_profit": 1.1279921822686076,
+      "stop_loss": 1.1278609724119746,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.690541710538902,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.3682889122874144,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:46:37.087020",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127915,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.3682889122874144,
+      "pip_target": 0.7718226860772535,
+      "take_profit": 1.1279921822686076,
+      "stop_loss": 1.1278609724119746,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.690541710538902,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.3682889122874144,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:48:45.796961",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127915,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.3682889122874144,
+      "pip_target": 0.7718226860772535,
+      "take_profit": 1.1279921822686076,
+      "stop_loss": 1.1278609724119746,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.690541710538902,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.3682889122874144,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:49:50.096563",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128445,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.4549427297809632,
+      "pip_target": 0.6087108841867119,
+      "take_profit": 1.1285058710884186,
+      "stop_loss": 1.1284023902381068,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.853017618339306,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.4549427297809632,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:50:39.611870",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128495,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.41144597286165296,
+      "pip_target": 0.8594741983625309,
+      "take_profit": 1.1285809474198363,
+      "stop_loss": 1.1284348368061146,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.7714611991155993,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.41144597286165296,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:51:37.116322",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128705,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.38740829147088685,
+      "pip_target": 0.8790614834602191,
+      "take_profit": 1.1287929061483462,
+      "stop_loss": 1.128643465696158,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.7263905465079128,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.38740829147088685,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:52:41.628961",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128435,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.3579717967549346,
+      "pip_target": 0.7228229288038102,
+      "take_profit": 1.1283627177071196,
+      "stop_loss": 1.1284855976050163,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6711971189155024,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0.3579717967549346,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:53:45.819804",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128435,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.3579717967549346,
+      "pip_target": 0.7228229288038102,
+      "take_profit": 1.1283627177071196,
+      "stop_loss": 1.1284855976050163,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6711971189155024,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.3579717967549346,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:54:09.360790",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128675,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.6801010223483863,
+      "pip_target": 0.41769259272383263,
+      "take_profit": 1.1287167692592726,
+      "stop_loss": 1.1286457615185095,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.6276894169032246,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.6801010223483863,
+          "DOWN": 0,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:54:50.118552",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128675,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.3347676890150531,
+      "pip_target": 0.41769259272383263,
+      "take_profit": 1.1287167692592726,
+      "stop_loss": 1.1286457615185095,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.6276894169032246,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.3347676890150531,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:55:39.631101",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128685,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.36309648371818604,
+      "pip_target": 0.4907046374095771,
+      "take_profit": 1.128734070463741,
+      "stop_loss": 1.1286506506753813,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.6808059069715988,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.36309648371818604,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:56:37.130729",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.12845,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.3408734098647923,
+      "pip_target": 0.4169750573530021,
+      "take_profit": 1.1284916975057353,
+      "stop_loss": 1.1284208117459853,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.6391376434964856,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.3408734098647923,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:57:16.371870",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128505,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.34533333333333327,
+      "pip_target": 0.6168446908473482,
+      "take_profit": 1.128566684469085,
+      "stop_loss": 1.1284618208716408,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0,
+          "NEUTRAL": 0.26666666666666666
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:57:41.654308",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128585,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.7730664077101559,
+      "pip_target": 0.6311097028511952,
+      "take_profit": 1.128648110970285,
+      "stop_loss": 1.1285408223208004,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.8019995144565424,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.7730664077101559,
+          "DOWN": 0,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:58:45.851057",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128585,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.4277330743768226,
+      "pip_target": 0.6311097028511952,
+      "take_profit": 1.128648110970285,
+      "stop_loss": 1.1285408223208004,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.8019995144565424,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.4277330743768226,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:59:09.392395",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128395,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.4693353718886881,
+      "pip_target": 0.4247991385238771,
+      "take_profit": 1.1283525200861477,
+      "stop_loss": 1.1284247359396966,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.8800038222912903,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0.4693353718886881,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T06:59:50.147729",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128305,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.128305,
+      "stop_loss": 1.128305,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:00:39.663959",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128305,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.4037462865496721,
+      "pip_target": 0.33357704089510376,
+      "take_profit": 1.1282716422959105,
+      "stop_loss": 1.1283283503928625,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.7570242872806352,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.4037462865496721,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:01:37.161168",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127885,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.33326024090493045,
+      "pip_target": 0.6985699631921531,
+      "take_profit": 1.1279548569963191,
+      "stop_loss": 1.1278361001025765,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.6248629516967446,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.33326024090493045,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:02:16.410987",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.12762,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.34533333333333327,
+      "pip_target": 0.7673505076429531,
+      "take_profit": 1.1276967350507643,
+      "stop_loss": 1.127566285464465,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0,
+          "NEUTRAL": 0.26666666666666666
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:02:41.716455",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.12734,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.34533333333333327,
+      "pip_target": 0.9365346418200828,
+      "take_profit": 1.127433653464182,
+      "stop_loss": 1.1272744425750727,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0,
+          "NEUTRAL": 0.26666666666666666
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:03:45.883232",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.12706,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.12706,
+      "stop_loss": 1.12706,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:04:09.411714",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127765,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.6860740599888834,
+      "pip_target": 1.1868682222311937,
+      "take_profit": 1.127883686822223,
+      "stop_loss": 1.1276819192244438,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.6388888624791564,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.6860740599888834,
+          "DOWN": 0,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:04:50.174693",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127895,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.3389283020907691,
+      "pip_target": 0.9168939151801653,
+      "take_profit": 1.127986689391518,
+      "stop_loss": 1.1278308174259375,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.635490566420192,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.3389283020907691,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:05:39.691623",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127945,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.3638756795868384,
+      "pip_target": 0.9669345617395022,
+      "take_profit": 1.1280416934561739,
+      "stop_loss": 1.1278773145806782,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.682266899225322,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.3638756795868384,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:06:37.201438",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127855,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.127855,
+      "stop_loss": 1.127855,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:07:16.476166",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.1275499999999998,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.502683902636875,
+      "pip_target": 0.867418649345439,
+      "take_profit": 1.1274632581350652,
+      "stop_loss": 1.127610719305454,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.9425323174441407,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0.502683902636875,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:07:41.787281",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.1273,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.3619592005551926,
+      "pip_target": 0.857899043311837,
+      "take_profit": 1.1272142100956688,
+      "stop_loss": 1.1273600529330319,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6786735010409861,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0.3619592005551926,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:09:39.086285",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127505,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.127505,
+      "stop_loss": 1.127505,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:10:02.627565",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127505,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.34533333333333327,
+      "pip_target": 0.5787249708760719,
+      "take_profit": 1.1275628724970876,
+      "stop_loss": 1.1274644892520387,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0,
+          "NEUTRAL": 0.26666666666666666
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:10:43.403406",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127575,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.35817655939356,
+      "pip_target": 0.6329684668993991,
+      "take_profit": 1.12763829684669,
+      "stop_loss": 1.127530692207317,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.671581048862925,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.35817655939356,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:15:30.259615",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.127735,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.35674137762238706,
+      "pip_target": 0.24584416750349097,
+      "take_profit": 1.1277104155832496,
+      "stop_loss": 1.1277522090917251,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6688900830419757,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.35674137762238706,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:17:15.026542",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128105,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.32925493604719025,
+      "pip_target": 0.5178710343908893,
+      "take_profit": 1.1280532128965608,
+      "stop_loss": 1.1281412509724074,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6173530050884817,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.32925493604719025,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:17:54.333487",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128105,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.34533333333333327,
+      "pip_target": 0.5178710343908893,
+      "take_profit": 1.128156787103439,
+      "stop_loss": 1.1280687490275925,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6173530050884817,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0.32925493604719025,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:18:25.161869",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128105,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.34533333333333327,
+      "pip_target": 0.5178710343908893,
+      "take_profit": 1.128156787103439,
+      "stop_loss": 1.1280687490275925,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6173530050884817,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0.32925493604719025,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:19:39.443644",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128265,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.128265,
+      "stop_loss": 1.128265,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:20:02.995126",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128265,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.34533333333333327,
+      "pip_target": 0.18571178014576387,
+      "take_profit": 1.1282835711780146,
+      "stop_loss": 1.12825200017539,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0,
+          "NEUTRAL": 0.26666666666666666
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:20:43.782690",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128415,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.128415,
+      "stop_loss": 1.128415,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:21:33.493782",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.12825,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.36873915941395075,
+      "pip_target": 0.6860842156412262,
+      "take_profit": 1.1281813915784358,
+      "stop_loss": 1.1282980258950948,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6913859239011576,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.36873915941395075,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:22:30.772395",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.12825,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.36873915941395075,
+      "pip_target": 0.6860842156412262,
+      "take_profit": 1.1281813915784358,
+      "stop_loss": 1.1282980258950948,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6913859239011576,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.36873915941395075,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:23:12.359142",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.12825,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.36873915941395075,
+      "pip_target": 0.6860842156412262,
+      "take_profit": 1.1281813915784358,
+      "stop_loss": 1.1282980258950948,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6913859239011576,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0.36873915941395075,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:23:56.648770",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.12825,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.36873915941395075,
+      "pip_target": 0.6860842156412262,
+      "take_profit": 1.1281813915784358,
+      "stop_loss": 1.1282980258950948,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6913859239011576,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0.36873915941395075,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:25:35.408863",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.12853,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.38068762157425895,
+      "pip_target": 0.2765262073791586,
+      "take_profit": 1.128557652620738,
+      "stop_loss": 1.1285106431654834,
+      "signals": {
+        "technical": {
+          "direction": "UP",
+          "confidence": 0.7137892904517356,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.38068762157425895,
+          "DOWN": 0,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:25:58.940721",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128545,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.34533333333333327,
+      "pip_target": 0.6465580696778258,
+      "take_profit": 1.1286096558069676,
+      "stop_loss": 1.1284997409351225,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0,
+          "NEUTRAL": 0.26666666666666666
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:28:02.103066",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128385,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.128385,
+      "stop_loss": 1.128385,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:28:51.836767",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128385,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "pip_target": 0.0,
+      "take_profit": 1.128385,
+      "stop_loss": 1.128385,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0,
+          "NEUTRAL": 0.5
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:29:49.099094",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128745,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.34643039141191884,
+      "pip_target": 0.3359555699017004,
+      "take_profit": 1.12871140444301,
+      "stop_loss": 1.1287685168898933,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6495569838973478,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0,
+          "DOWN": 0.34643039141191884,
+          "NEUTRAL": 0.2333333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:30:28.429497",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128745,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "DOWN",
+      "confidence": 0.34643039141191884,
+      "pip_target": 0.3359555699017004,
+      "take_profit": 1.12871140444301,
+      "stop_loss": 1.1287685168898933,
+      "signals": {
+        "technical": {
+          "direction": "DOWN",
+          "confidence": 0.6495569838973478,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0.34643039141191884,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2025-05-08T07:30:53.820465",
+      "symbol": "EUR_USD",
+      "timeframe": "5m",
+      "current_price": 1.128795,
+      "data_depth": "optimal",
+      "method": "ensemble_method",
+      "direction": "UP",
+      "confidence": 0.34533333333333327,
+      "pip_target": 0.3290979991615407,
+      "take_profit": 1.128827909799916,
+      "stop_loss": 1.1287719631400588,
+      "signals": {
+        "technical": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.5333333333333333
+        },
+        "pattern": {
+          "direction": "UP",
+          "confidence": 0.74,
+          "weight": 0.4666666666666666
+        },
+        "ml": {
+          "direction": "NEUTRAL",
+          "confidence": 0.5,
+          "weight": 0.0
+        },
+        "direction_scores": {
+          "UP": 0.34533333333333327,
+          "DOWN": 0,
+          "NEUTRAL": 0.26666666666666666
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "timestamp": "2025-05-07T09:30:00",
+  "symbol": "EUR_USD",
+  "timeframe": "5m",
+  "predictions": [
+    {
+      "method": "technical",
+      "depth": "minimum",
+      "direction": "BULLISH",
+      "confidence": 0.72,
+      "pip_target": 12,
+      "time_horizon_minutes": 30,
+      "key_indicators": {
+        "rsi": "NEUTRAL",
+        "macd": "BULLISH",
+        "moving_averages": "BULLISH"
+      }
+    },
+    {
+      "method": "pattern",
+      "depth": "minimum",
+      "direction": "BULLISH",
+      "confidence": 0.81,
+      "pip_target": 15,
+      "time_horizon_minutes": 30,
+      "key_patterns": ["HAMMER"]
+    },
+    {
+      "method": "ensemble",
+      "depth": "minimum",
+      "direction": "BULLISH",
+      "confidence": 0.78,
+      "pip_target": 14,
+      "time_horizon_minutes": 30,
+      "component_weights": {
+        "technical": 0.40,
+        "pattern": 0.60
+      }
+    }
+  ]
+}

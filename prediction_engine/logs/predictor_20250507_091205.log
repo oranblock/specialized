@@ -1,0 +1,17 @@
+2025-05-07 09:12:06,450 - PredictionEngine - INFO - Initialized prediction engine for EUR_USD with 5m timeframe
+2025-05-07 09:12:06,450 - PredictionEngine - INFO - Analyzed data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed
+2025-05-07 09:12:06,450 - PredictionEngine - INFO - Prediction output directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions
+2025-05-07 09:12:06,451 - PredictionEngine - INFO - Generating prediction using optimal data and ensemble_method method
+2025-05-07 09:12:06,452 - PredictionEngine - ERROR - No analyzed data files found in /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal
+2025-05-07 09:12:06,452 - PredictionEngine - ERROR - Could not find analyzed data for optimal
+2025-05-07 09:12:06,452 - PredictionEngine - ERROR - Could not load analyzed data for optimal
+{
+  "error": "No analyzed data available for optimal",
+  "timestamp": "2025-05-07T09:12:06.452819",
+  "symbol": "EUR_USD",
+  "timeframe": "5m",
+  "data_depth": "optimal",
+  "method": "ensemble_method",
+  "direction": "NEUTRAL",
+  "confidence": 0.5
+}

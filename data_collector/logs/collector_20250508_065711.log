@@ -1,0 +1,31 @@
+2025-05-08 06:57:12,282 - DataCollector - INFO - Initialized data collector for EUR_USD with 5m timeframe
+2025-05-08 06:57:12,282 - DataCollector - INFO - Data will be stored in /home/clouduser/spike/forex_spike_predictor/specialized/data/raw
+2025-05-08 06:57:12,282 - DataCollector - INFO - Starting data collection for EUR_USD at 5s intervals
+2025-05-08 06:58:08,442 - DataCollector - INFO - Collected 10 data points
+2025-05-08 06:59:10,597 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:00:11,995 - DataCollector - INFO - Collected 30 data points
+2025-05-08 07:01:13,684 - DataCollector - INFO - Collected 40 data points
+2025-05-08 07:02:14,503 - DataCollector - INFO - Collected 50 data points
+2025-05-08 07:02:14,518 - DataCollector - INFO - Saved 50 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:03:17,883 - DataCollector - INFO - Collected 10 data points
+2025-05-08 07:04:19,747 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:05:21,902 - DataCollector - INFO - Collected 30 data points
+2025-05-08 07:06:23,985 - DataCollector - INFO - Collected 40 data points
+2025-05-08 07:07:20,096 - DataCollector - INFO - Saved 49 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:08:23,633 - DataCollector - INFO - Collected 10 data points
+2025-05-08 07:10:18,388 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:14:15,601 - DataCollector - INFO - Saved 29 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:16:45,847 - DataCollector - INFO - Collected 10 data points
+2025-05-08 07:17:26,889 - DataCollector - ERROR - Error fetching price: HTTPSConnectionPool(host='api.polygon.io', port=443): Max retries exceeded with url: /v1/last_quote/currencies/EUR/USD?apiKey=p6WersYkAHkp9TccmLHvdDwGaZ4CnR0Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ada09b690>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2025-05-08 07:18:42,655 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:19:19,449 - DataCollector - INFO - Saved 26 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:20:17,550 - DataCollector - INFO - Collected 10 data points
+2025-05-08 07:21:15,513 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:22:12,156 - DataCollector - INFO - Collected 30 data points
+2025-05-08 07:23:11,128 - DataCollector - INFO - Collected 40 data points
+2025-05-08 07:24:22,973 - DataCollector - INFO - Saved 47 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:25:41,759 - DataCollector - INFO - Collected 10 data points
+2025-05-08 07:28:01,146 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:28:58,352 - DataCollector - INFO - Collected 30 data points
+2025-05-08 07:29:26,856 - DataCollector - INFO - Saved 35 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:30:23,948 - DataCollector - INFO - Collected 10 data points

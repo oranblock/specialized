@@ -1,0 +1,8 @@
+2025-05-07 09:12:04,264 - DataAnalyzer - INFO - Initialized data analyzer for EUR_USD with 5m timeframe
+2025-05-07 09:12:04,265 - DataAnalyzer - INFO - Raw data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw
+2025-05-07 09:12:04,265 - DataAnalyzer - INFO - Analysis output directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed
+2025-05-07 09:12:04,265 - DataAnalyzer - INFO - Candle counts for analysis depths: {<AnalysisDepth.MINIMUM: 'minimum'>: 26, <AnalysisDepth.RECOMMENDED: 'recommended'>: 50, <AnalysisDepth.OPTIMAL: 'optimal'>: 100}
+2025-05-07 09:12:04,266 - DataAnalyzer - ERROR - Data directory not found: /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m
+2025-05-07 09:12:04,267 - DataAnalyzer - ERROR - Could not find latest raw data file
+2025-05-07 09:12:04,267 - DataAnalyzer - ERROR - Failed to load raw data
+null

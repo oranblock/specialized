@@ -1,0 +1,411 @@
+{
+  "system_name": "Multi-Component Forex Pattern Prediction System",
+  "description": "A specialized, modular system for collecting, analyzing, predicting and visualizing forex price patterns",
+  "version": "1.0.0",
+  "architecture": {
+    "overview": "Four-component microservices architecture with specialized roles and persistent storage",
+    "data_flow": "Collector → Analyzer → Predictor → Dashboard, with persistent storage at each stage",
+    "components": [
+      {
+        "name": "data_collector",
+        "description": "Collects raw price data from Polygon.io API and stores in persistent storage",
+        "responsibilities": [
+          "Connect to Polygon.io API",
+          "Collect tick-by-tick or interval price data",
+          "Format data properly with timestamps",
+          "Store data in CSV files with proper naming",
+          "Handle API errors and reconnections",
+          "Maintain data integrity during long runs"
+        ],
+        "inputs": [
+          "Polygon.io API key",
+          "Currency pair symbol",
+          "Timeframe interval",
+          "Output directory path"
+        ],
+        "outputs": [
+          "Raw price data CSV files",
+          "Collection logs",
+          "Status updates"
+        ],
+        "storage": {
+          "primary": "CSV files with consistent naming pattern",
+          "directory_structure": "{data_dir}/{symbol}/{timeframe}/{date}_{symbol}_{timeframe}.csv",
+          "file_format": "timestamp,open,high,low,close,volume",
+          "backup": "Rolling 7-day compressed backups"
+        },
+        "configuration": {
+          "polling_interval": "Configurable (default: 1 second)",
+          "batch_save_frequency": "Configurable (default: every 5 minutes)",
+          "reconnection_strategy": "Exponential backoff with jitter"
+        }
+      },
+      {
+        "name": "data_analyzer",
+        "description": "Processes raw data to generate technical indicators and pattern recognition at different time depths",
+        "responsibilities": [
+          "Load raw price data from collector storage",
+          "Calculate technical indicators using TA-Lib",
+          "Identify candlestick patterns",
+          "Perform multi-timeframe analysis",
+          "Execute analysis at different data depths (2h, 4h, 8h)",
+          "Store processed data with indicators",
+          "Generate pattern recognition results"
+        ],
+        "inputs": [
+          "Raw price data files",
+          "Analysis configuration (indicators, patterns to detect)",
+          "Data depth settings (2h, 4h, 8h)"
+        ],
+        "outputs": [
+          "Enhanced dataframes with technical indicators",
+          "Pattern recognition results",
+          "Signal strength metrics",
+          "Analysis logs"
+        ],
+        "storage": {
+          "primary": "Processed data files with indicators",
+          "directory_structure": "{data_dir}/analyzed/{symbol}/{timeframe}/{depth}/{date}_{symbol}_{timeframe}_{depth}_analyzed.csv",
+          "pattern_results": "{data_dir}/patterns/{symbol}/{timeframe}/{depth}/{date}_{symbol}_{timeframe}_{depth}_patterns.json"
+        },
+        "analysis_levels": [
+          {
+            "name": "minimum",
+            "description": "Basic analysis with minimal data (2h of 5min candles)",
+            "candle_count": 26,
+            "indicators": ["MACD", "RSI", "Basic patterns"]
+          },
+          {
+            "name": "recommended",
+            "description": "Standard analysis with recommended data (4h of 5min candles)",
+            "candle_count": 50,
+            "indicators": ["All basic indicators", "Bollinger Bands", "Standard patterns", "Support/Resistance"]
+          },
+          {
+            "name": "optimal",
+            "description": "Comprehensive analysis with optimal data depth (8h of 5min candles)",
+            "candle_count": 100,
+            "indicators": ["Complete indicator suite", "Pattern combinations", "Volume analysis", "Multi-timeframe correlation"]
+          }
+        ]
+      },
+      {
+        "name": "prediction_engine",
+        "description": "Generates price direction forecasts based on analysis results and tracks prediction accuracy",
+        "responsibilities": [
+          "Load analyzed data from different depth levels",
+          "Apply prediction models to analyzed data",
+          "Generate directional forecasts (UP/DOWN/NEUTRAL)",
+          "Calculate confidence scores",
+          "Determine pip targets and volatility estimates",
+          "Record predictions for backtesting",
+          "Compare predictions with actual outcomes",
+          "Calculate prediction performance metrics"
+        ],
+        "inputs": [
+          "Analyzed data files with indicators",
+          "Pattern recognition results",
+          "Pre-trained ML models",
+          "Prediction configuration"
+        ],
+        "outputs": [
+          "Price direction forecasts",
+          "Take profit and stop loss levels",
+          "Confidence scores",
+          "Prediction logs",
+          "Performance metrics"
+        ],
+        "storage": {
+          "primary": "Prediction records database/files",
+          "directory_structure": "{data_dir}/predictions/{symbol}/{timeframe}/{date}_{symbol}_{timeframe}_predictions.json",
+          "performance_metrics": "{data_dir}/performance/{symbol}/{timeframe}/{date}_{symbol}_{timeframe}_metrics.json"
+        },
+        "prediction_methods": [
+          {
+            "name": "technical_consensus",
+            "description": "Weighted consensus of technical indicators",
+            "components": ["MACD", "RSI", "Stochastic", "Bollinger Bands", "Moving Averages"],
+            "confidence_calculation": "Weighted average of signal strengths"
+          },
+          {
+            "name": "pattern_recognition",
+            "description": "Candlestick pattern-based prediction",
+            "components": ["Single patterns", "Pattern combinations", "Pattern strength"],
+            "confidence_calculation": "Pattern reliability and historical accuracy"
+          },
+          {
+            "name": "machine_learning",
+            "description": "ML model-based prediction",
+            "components": ["Random Forest", "XGBoost", "Neural Networks"],
+            "confidence_calculation": "Model probability outputs"
+          },
+          {
+            "name": "ensemble_method",
+            "description": "Combination of all prediction methods",
+            "components": ["Technical", "Pattern", "ML"],
+            "confidence_calculation": "Weighted average with dynamic weights based on historical performance"
+          }
+        ],
+        "performance_tracking": {
+          "metrics": ["Accuracy", "Precision", "Recall", "F1 Score", "Win Rate", "Profit Factor", "Average Win/Loss"],
+          "segmentation": ["By currency pair", "By timeframe", "By prediction method", "By data depth"]
+        }
+      },
+      {
+        "name": "dashboard",
+        "description": "Visual interface for monitoring patterns, predictions, and performance",
+        "responsibilities": [
+          "Display current price data and charts",
+          "Show detected patterns with visualizations",
+          "Present prediction results with confidence levels",
+          "Track prediction history and outcomes",
+          "Visualize performance metrics",
+          "Provide comparison between different data depths",
+          "Enable configuration of system parameters"
+        ],
+        "inputs": [
+          "Current price data",
+          "Analysis results from different depths",
+          "Prediction outputs",
+          "Performance metrics"
+        ],
+        "outputs": [
+          "Interactive charts and visualizations",
+          "Real-time patterns and predictions display",
+          "Performance dashboards",
+          "Downloadable reports"
+        ],
+        "interface": {
+          "framework": "Streamlit",
+          "layout": "Multi-tab with sidebar configuration",
+          "components": ["Price charts", "Pattern displays", "Prediction cards", "History tables", "Performance metrics"]
+        },
+        "features": [
+          "Real-time updates",
+          "Side-by-side comparison of different data depths",
+          "Historical pattern browser",
+          "Prediction accuracy tracking",
+          "Configuration controls"
+        ]
+      }
+    ],
+    "communication": {
+      "methods": [
+        {
+          "type": "file_based",
+          "description": "Components communicate by reading/writing to disk",
+          "pros": ["Simple implementation", "No extra dependencies", "Natural data persistence"],
+          "cons": ["Slower than in-memory", "Potential disk I/O bottlenecks"]
+        },
+        {
+          "type": "message_queue",
+          "description": "Components communicate via message broker",
+          "pros": ["Decoupled components", "Can handle high throughput", "Built-in reliability"],
+          "cons": ["Additional dependency", "More complex setup"]
+        },
+        {
+          "type": "rest_api",
+          "description": "Components expose REST endpoints for data exchange",
+          "pros": ["Standard HTTP interface", "Easy to debug", "Can serve dashboard directly"],
+          "cons": ["Higher latency", "More boilerplate code"]
+        }
+      ],
+      "recommended": "Start with file-based communication for simplicity, upgrade to message queue if needed for performance"
+    }
+  },
+  "implementation_plan": {
+    "phase1": {
+      "name": "Core Data Collection",
+      "duration": "1 week",
+      "tasks": [
+        "Create data collector module with Polygon.io integration",
+        "Implement robust error handling and reconnection logic",
+        "Set up persistent storage structure for raw data",
+        "Add logging and monitoring capabilities",
+        "Create basic CLI for controlling the collector"
+      ],
+      "deliverables": [
+        "Functional data collector that runs indefinitely",
+        "Raw data storage structure",
+        "Collection monitoring tools"
+      ]
+    },
+    "phase2": {
+      "name": "Data Analysis Engine",
+      "duration": "2 weeks",
+      "tasks": [
+        "Implement technical indicator calculation with TA-Lib",
+        "Create pattern recognition module",
+        "Set up multi-depth analysis (2h, 4h, 8h)",
+        "Develop storage for analyzed data",
+        "Create comparison module for different depth results"
+      ],
+      "deliverables": [
+        "Analysis module processing raw data at different depths",
+        "Pattern recognition implementation",
+        "Analyzed data storage structure"
+      ]
+    },
+    "phase3": {
+      "name": "Prediction Engine",
+      "duration": "2 weeks",
+      "tasks": [
+        "Implement consensus-based prediction method",
+        "Develop pattern-based prediction logic",
+        "Integrate ML model prediction (using existing models)",
+        "Create ensemble prediction method",
+        "Implement performance tracking and metrics calculation"
+      ],
+      "deliverables": [
+        "Prediction module generating forecasts",
+        "Performance tracking system",
+        "Prediction storage and history"
+      ]
+    },
+    "phase4": {
+      "name": "Dashboard Integration",
+      "duration": "2 weeks",
+      "tasks": [
+        "Create multi-tab Streamlit interface",
+        "Implement comparison views for different data depths",
+        "Develop pattern visualization components",
+        "Add prediction history and tracking",
+        "Create performance metrics dashboard"
+      ],
+      "deliverables": [
+        "Functional dashboard showing all system aspects",
+        "Interactive pattern and prediction display",
+        "Performance monitoring interface"
+      ]
+    },
+    "phase5": {
+      "name": "System Integration and Optimization",
+      "duration": "1 week",
+      "tasks": [
+        "Integrate all components into coherent system",
+        "Implement startup/shutdown procedures",
+        "Optimize performance for long-running operation",
+        "Create comprehensive documentation",
+        "Develop automated testing"
+      ],
+      "deliverables": [
+        "Complete integrated system",
+        "System documentation",
+        "Automated tests for all components"
+      ]
+    }
+  },
+  "technical_stack": {
+    "programming_language": "Python 3.9+",
+    "key_libraries": {
+      "data_processing": ["Pandas", "NumPy"],
+      "technical_analysis": ["TA-Lib", "pandas-ta"],
+      "api_integration": ["requests", "websockets"],
+      "machine_learning": ["scikit-learn", "XGBoost"],
+      "visualization": ["Plotly", "Streamlit"],
+      "persistence": ["SQLite/PostgreSQL", "SQLAlchemy"]
+    },
+    "infrastructure": {
+      "deployment": "Containerized with Docker",
+      "persistence": "Volume-mounted storage for data continuity",
+      "scaling": "Component-level horizontal scaling as needed"
+    }
+  },
+  "component_interfaces": {
+    "data_collector_output": {
+      "file_format": "CSV",
+      "required_columns": ["timestamp", "open", "high", "low", "close", "volume"],
+      "metadata": {
+        "symbol": "Currency pair",
+        "timeframe": "Interval duration",
+        "collection_start": "ISO datetime",
+        "collection_end": "ISO datetime"
+      }
+    },
+    "analyzer_output": {
+      "file_format": "CSV with JSON metadata",
+      "indicators": {
+        "trend": ["SMA", "EMA", "MACD", "ADX"],
+        "momentum": ["RSI", "Stochastic", "CCI"],
+        "volatility": ["ATR", "Bollinger Bands", "Keltner Channels"],
+        "volume": ["OBV", "Volume", "MFI"]
+      },
+      "patterns": {
+        "reversal": ["Doji", "Hammer", "Engulfing", "Morning/Evening Star"],
+        "continuation": ["Three Methods", "Rising/Falling Windows"],
+        "volatility": ["Long Legged Doji", "Spinning Top"]
+      }
+    },
+    "predictor_output": {
+      "file_format": "JSON",
+      "fields": {
+        "timestamp": "Prediction time",
+        "symbol": "Currency pair",
+        "timeframe": "Interval duration",
+        "direction": "UP/DOWN/NEUTRAL",
+        "confidence": "0.0-1.0 value",
+        "data_depth": "2h/4h/8h",
+        "pip_target": "Expected movement in pips",
+        "take_profit": "Suggested take profit level",
+        "stop_loss": "Suggested stop loss level",
+        "method": "Prediction method used",
+        "signals": "Component signals and strengths"
+      }
+    },
+    "performance_metrics": {
+      "file_format": "JSON",
+      "time_periods": ["Last 24 hours", "Last 7 days", "Last 30 days", "All time"],
+      "metrics": {
+        "accuracy": "Percentage of correct predictions",
+        "win_rate": "Percentage of trades hitting take profit",
+        "loss_rate": "Percentage of trades hitting stop loss",
+        "profit_factor": "Ratio of winning pips to losing pips",
+        "average_win": "Average pips gained on winning trades",
+        "average_loss": "Average pips lost on losing trades",
+        "risk_reward": "Ratio of average win to average loss"
+      }
+    }
+  },
+  "operational_guidelines": {
+    "system_startup": {
+      "sequence": [
+        "Start data collector",
+        "Start data analyzer once sufficient data available",
+        "Start prediction engine",
+        "Start dashboard"
+      ],
+      "initial_data_requirements": {
+        "minimum": "26 candles (130 minutes for 5min timeframe)",
+        "recommended": "50 candles (250 minutes for 5min timeframe)",
+        "optimal": "100 candles (500 minutes for 5min timeframe)"
+      }
+    },
+    "monitoring": {
+      "key_metrics": [
+        "Data collection rate",
+        "API connectivity status",
+        "Analysis processing time",
+        "Prediction generation latency",
+        "Storage utilization"
+      ],
+      "alerts": [
+        "API disconnection",
+        "Data collection interruption",
+        "Abnormal analysis results",
+        "System component failure"
+      ]
+    },
+    "maintenance": {
+      "data_retention": {
+        "raw_data": "30 days rolling window",
+        "analyzed_data": "90 days",
+        "predictions": "365 days",
+        "performance_metrics": "Indefinite"
+      },
+      "system_updates": {
+        "frequency": "Monthly",
+        "process": "Component-by-component update without full system downtime"
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+2025-05-08 05:41:33,839 - PredictionEngine - INFO - Initialized prediction engine for EUR_USD with 5m timeframe
+2025-05-08 05:41:33,842 - PredictionEngine - INFO - Analyzed data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed
+2025-05-08 05:41:33,842 - PredictionEngine - INFO - Prediction output directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions
+2025-05-08 05:41:33,843 - PredictionEngine - INFO - Generating prediction using optimal data and ensemble_method method
+2025-05-08 05:41:33,843 - PredictionEngine - INFO - Found latest analyzed data file for optimal: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 05:41:33,843 - PredictionEngine - INFO - Loading analyzed data from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 05:41:33,856 - PredictionEngine - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 05:41:33,857 - PredictionEngine - INFO - Found latest pattern data file for optimal: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 05:41:33,857 - PredictionEngine - INFO - Loading pattern data from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 05:41:33,858 - PredictionEngine - INFO - Loaded 1 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 05:41:33,858 - PredictionEngine - INFO - Generating technical prediction
+2025-05-08 05:41:33,859 - PredictionEngine - INFO - Technical prediction: NEUTRAL with 0.50 confidence
+2025-05-08 05:41:33,859 - PredictionEngine - INFO - Generating pattern-based prediction
+2025-05-08 05:41:33,859 - PredictionEngine - INFO - Pattern prediction: NEUTRAL with 0.50 confidence
+2025-05-08 05:41:33,859 - PredictionEngine - INFO - Found 0 bullish and 0 bearish patterns
+2025-05-08 05:41:33,859 - PredictionEngine - INFO - Generating ensemble prediction
+2025-05-08 05:41:33,859 - PredictionEngine - INFO - Ensemble prediction: NEUTRAL with 0.50 confidence
+2025-05-08 05:41:33,859 - PredictionEngine - INFO - Calculating pip targets with ATR multiplier 1.5
+2025-05-08 05:41:33,859 - PredictionEngine - INFO - Calculated pip target: 0.0 pips
+2025-05-08 05:41:33,859 - PredictionEngine - INFO - Take profit: 1.13068, Stop loss: 1.13068
+2025-05-08 05:41:33,861 - PredictionEngine - INFO - Saved prediction to /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/20250508_EUR_USD_5m_predictions.json
+2025-05-08 05:41:33,862 - PredictionEngine - INFO - Generated prediction: NEUTRAL with 0.50 confidence
+{
+  "timestamp": "2025-05-08T05:41:33.859910",
+  "symbol": "EUR_USD",
+  "timeframe": "5m",
+  "current_price": 1.130675,
+  "data_depth": "optimal",
+  "method": "ensemble_method",
+  "direction": "NEUTRAL",
+  "confidence": 0.5,
+  "pip_target": 0.0,
+  "take_profit": 1.130675,
+  "stop_loss": 1.130675,
+  "signals": {
+    "technical": {
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "weight": 0.5333333333333333
+    },
+    "pattern": {
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "weight": 0.4666666666666666
+    },
+    "ml": {
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "weight": 0.0
+    },
+    "direction_scores": {
+      "UP": 0,
+      "DOWN": 0,
+      "NEUTRAL": 0.5
+    }
+  }
+}

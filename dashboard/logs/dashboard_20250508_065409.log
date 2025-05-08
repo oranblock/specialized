@@ -1,0 +1,164 @@
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.8.123:8501
+  External URL: http://78.89.203.75:8501
+
+2025-05-08 06:54:31,210 - Dashboard - INFO - Initialized dashboard for EUR_USD with 5m timeframe
+2025-05-08 06:54:31,210 - Dashboard - INFO - Data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data
+2025-05-08 06:54:31,211 - Dashboard - INFO - Starting data refresh thread with 60s interval
+2025-05-08 06:54:31,214 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:54:31,281 - Dashboard - INFO - Loaded 1756 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:54:31,283 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:54:31,289 - Dashboard - INFO - Loaded 26 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:54:31,290 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:54:31,291 - Dashboard - INFO - Loaded 15 pattern types with 16 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:54:31,291 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:54:31,297 - Dashboard - INFO - Loaded 50 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:54:31,298 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:54:31,299 - Dashboard - INFO - Loaded 15 pattern types with 40 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:54:31,299 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:54:31,306 - Dashboard - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:54:31,307 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:54:31,308 - Dashboard - INFO - Loaded 15 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:54:31,309 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:54:31,310 - Dashboard - INFO - Loaded 36 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:54:31,311 - Dashboard - INFO - Loading performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:54:31,311 - Dashboard - INFO - Loaded performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:54:33,675 - Dashboard - INFO - Initialized dashboard for EUR_USD with 5m timeframe
+2025-05-08 06:54:33,675 - Dashboard - INFO - Data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data
+2025-05-08 06:54:33,675 - Dashboard - INFO - Starting data refresh thread with 60s interval
+2025-05-08 06:54:33,678 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:54:33,746 - Dashboard - INFO - Loaded 1756 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:54:33,747 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:54:33,752 - Dashboard - INFO - Loaded 26 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:54:33,753 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:54:33,755 - Dashboard - INFO - Loaded 15 pattern types with 16 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:54:33,756 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:54:33,762 - Dashboard - INFO - Loaded 50 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:54:33,763 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:54:33,764 - Dashboard - INFO - Loaded 15 pattern types with 40 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:54:33,764 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:54:33,772 - Dashboard - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:54:33,773 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:54:33,774 - Dashboard - INFO - Loaded 15 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:54:33,774 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:54:33,776 - Dashboard - INFO - Loaded 36 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:54:33,776 - Dashboard - INFO - Loading performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:54:33,777 - Dashboard - INFO - Loaded performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:55:31,314 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:55:31,329 - Dashboard - INFO - Loaded 1805 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:55:31,330 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:55:31,334 - Dashboard - INFO - Loaded 26 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:55:31,335 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:55:31,335 - Dashboard - INFO - Loaded 1 pattern types with 16 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:55:31,336 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:55:31,340 - Dashboard - INFO - Loaded 50 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:55:31,340 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:55:31,341 - Dashboard - INFO - Loaded 1 pattern types with 40 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:55:31,341 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:55:31,345 - Dashboard - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:55:31,346 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:55:31,346 - Dashboard - INFO - Loaded 1 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:55:31,347 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:55:31,348 - Dashboard - INFO - Loaded 37 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:55:31,348 - Dashboard - INFO - Loading performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:55:31,349 - Dashboard - INFO - Loaded performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:55:33,779 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:55:33,795 - Dashboard - INFO - Loaded 1805 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:55:33,796 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:55:33,800 - Dashboard - INFO - Loaded 26 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:55:33,801 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:55:33,802 - Dashboard - INFO - Loaded 1 pattern types with 16 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:55:33,803 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:55:33,806 - Dashboard - INFO - Loaded 50 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:55:33,807 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:55:33,807 - Dashboard - INFO - Loaded 1 pattern types with 40 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:55:33,808 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:55:33,812 - Dashboard - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:55:33,813 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:55:33,814 - Dashboard - INFO - Loaded 1 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:55:33,814 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:55:33,815 - Dashboard - INFO - Loaded 37 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:55:33,816 - Dashboard - INFO - Loading performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:55:33,816 - Dashboard - INFO - Loaded performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:55:37,593 - Dashboard - INFO - Initialized dashboard for EUR_USD with 5m timeframe
+2025-05-08 06:55:37,594 - Dashboard - INFO - Data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data
+2025-05-08 06:55:37,594 - Dashboard - INFO - Starting data refresh thread with 60s interval
+2025-05-08 06:55:37,609 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:55:37,664 - Dashboard - INFO - Loaded 1805 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:55:37,665 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:55:37,673 - Dashboard - INFO - Loaded 26 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:55:37,674 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:55:37,675 - Dashboard - INFO - Loaded 15 pattern types with 16 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:55:37,676 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:55:37,684 - Dashboard - INFO - Loaded 50 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:55:37,685 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:55:37,685 - Dashboard - INFO - Loaded 15 pattern types with 40 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:55:37,686 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:55:37,695 - Dashboard - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:55:37,696 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:55:37,697 - Dashboard - INFO - Loaded 15 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:55:37,698 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:55:37,700 - Dashboard - INFO - Loaded 37 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:55:37,701 - Dashboard - INFO - Loading performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:55:37,701 - Dashboard - INFO - Loaded performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:56:31,352 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:56:31,366 - Dashboard - INFO - Loaded 1855 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:56:31,367 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:56:31,370 - Dashboard - INFO - Loaded 26 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:56:31,371 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:56:31,371 - Dashboard - INFO - Loaded 15 pattern types with 16 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:56:31,372 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:56:31,375 - Dashboard - INFO - Loaded 50 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:56:31,376 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:56:31,376 - Dashboard - INFO - Loaded 15 pattern types with 40 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:56:31,377 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:56:31,380 - Dashboard - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:56:31,381 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:56:31,381 - Dashboard - INFO - Loaded 15 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:56:31,382 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:56:31,383 - Dashboard - INFO - Loaded 38 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:56:31,384 - Dashboard - INFO - Loading performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:56:31,384 - Dashboard - INFO - Loaded performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:56:33,817 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:56:33,828 - Dashboard - INFO - Loaded 1855 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:56:33,829 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:56:33,833 - Dashboard - INFO - Loaded 26 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:56:33,834 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:56:33,835 - Dashboard - INFO - Loaded 15 pattern types with 16 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:56:33,835 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:56:33,839 - Dashboard - INFO - Loaded 50 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:56:33,839 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:56:33,840 - Dashboard - INFO - Loaded 15 pattern types with 40 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:56:33,840 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:56:33,844 - Dashboard - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:56:33,844 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:56:33,845 - Dashboard - INFO - Loaded 15 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:56:33,846 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:56:33,848 - Dashboard - INFO - Loaded 38 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:56:33,848 - Dashboard - INFO - Loading performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:56:33,849 - Dashboard - INFO - Loaded performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:56:37,704 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:56:37,721 - Dashboard - INFO - Loaded 1855 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-08 06:56:37,722 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:56:37,726 - Dashboard - INFO - Loaded 26 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-08 06:56:37,727 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:56:37,728 - Dashboard - INFO - Loaded 15 pattern types with 16 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-08 06:56:37,729 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:56:37,733 - Dashboard - INFO - Loaded 50 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-08 06:56:37,734 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:56:37,735 - Dashboard - INFO - Loaded 15 pattern types with 40 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-08 06:56:37,735 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:56:37,740 - Dashboard - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:56:37,741 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:56:37,742 - Dashboard - INFO - Loaded 15 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:56:37,742 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:56:37,743 - Dashboard - INFO - Loaded 39 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-08 06:56:37,744 - Dashboard - INFO - Loading performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+2025-05-08 06:56:37,745 - Dashboard - INFO - Loaded performance metrics from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_performance.json
+  Stopping...

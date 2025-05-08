@@ -1,0 +1,402 @@
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://100.81.82.95:8501
+  External URL: http://37.39.179.57:8501
+
+2025-05-07 17:44:00,158 - Dashboard - INFO - Initialized dashboard for EUR_USD with 5m timeframe
+2025-05-07 17:44:00,159 - Dashboard - INFO - Data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data
+2025-05-07 17:44:00,159 - Dashboard - INFO - Starting data refresh thread with 60s interval
+2025-05-07 17:44:00,164 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:44:00,238 - Dashboard - INFO - Loaded 1387 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:44:00,240 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:44:00,245 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:44:00,247 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:44:00,249 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:44:00,250 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:44:00,256 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:44:00,258 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:44:00,259 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:44:00,260 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:44:00,267 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:44:00,268 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:44:00,269 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:44:00,271 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:44:00,272 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:44:00,273 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+[31m──[0m[31m────────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────────[0m[31m──[0m
+[31m [0m [2m/home/clouduser/spike/smart/lib/python3.11/site-packages/streamlit/runtime/scriptrun[0m [31m [0m
+[31m [0m [2mner/[0m[1mexec_code.py[0m:121 in exec_func_with_error_handling                                [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/clouduser/spike/smart/lib/python3.11/site-packages/streamlit/runtime/scriptrun[0m [31m [0m
+[31m [0m [2mner/[0m[1mscript_runner.py[0m:648 in code_to_exec                                             [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/clouduser/spike/forex_spike_predictor/specialized/dashboard/src/[0m[1mdashboard.py[0m:1 [31m [0m
+[31m [0m 450 in <module>                                                                      [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m1447 [0m[2m│   [0mdashboard.run_dashboard()                                                 [31m [0m
+[31m [0m   [2m1448 [0m                                                                              [31m [0m
+[31m [0m   [2m1449 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                    [31m [0m
+[31m [0m [31m❱ [0m1450 [2m│   [0m[1;4mmain()[0m                                                                    [31m [0m
+[31m [0m   [2m1451 [0m                                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/clouduser/spike/forex_spike_predictor/specialized/dashboard/src/[0m[1mdashboard.py[0m:1 [31m [0m
+[31m [0m 447 in main                                                                          [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m1444 [0m[2m│   [0mrefresh_thread.start()                                                    [31m [0m
+[31m [0m   [2m1445 [0m[2m│   [0m                                                                          [31m [0m
+[31m [0m   [2m1446 [0m[2m│   [0m[2m# Run dashboard[0m                                                           [31m [0m
+[31m [0m [31m❱ [0m1447 [2m│   [0m[1;4mdashboard.run_dashboard()[0m                                                 [31m [0m
+[31m [0m   [2m1448 [0m                                                                              [31m [0m
+[31m [0m   [2m1449 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                    [31m [0m
+[31m [0m   [2m1450 [0m[2m│   [0mmain()                                                                    [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/clouduser/spike/forex_spike_predictor/specialized/dashboard/src/[0m[1mdashboard.py[0m:1 [31m [0m
+[31m [0m 217 in run_dashboard                                                                 [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m1214 [0m[2m│   │   │   │   │   │   [0m                                                      [31m [0m
+[31m [0m   [2m1215 [0m[2m│   │   │   │   │   │   [0m[2m# Small chart[0m                                         [31m [0m
+[31m [0m   [2m1216 [0m[2m│   │   │   │   │   │   [0mchart = [96mself[0m.create_price_chart(df, depth, patterns)  [31m [0m
+[31m [0m [31m❱ [0m1217 [2m│   │   │   │   │   │   [0m[1;4mst.plotly_chart(chart, use_container_width=[0m[1;4;94mTrue[0m[1;4m)[0m      [31m [0m
+[31m [0m   [2m1218 [0m[2m│   │   │   │   │   │   [0m                                                      [31m [0m
+[31m [0m   [2m1219 [0m[2m│   │   │   │   │   │   [0m[2m# Pattern card[0m                                        [31m [0m
+[31m [0m   [2m1220 [0m[2m│   │   │   │   │   │   [0m[94mif[0m patterns [95mis[0m [95mnot[0m [94mNone[0m:                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/clouduser/spike/smart/lib/python3.11/site-packages/streamlit/runtime/[0m[1mmetrics_u[0m [31m [0m
+[31m [0m [1mtil.py[0m:444 in wrapped_func                                                           [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/clouduser/spike/smart/lib/python3.11/site-packages/streamlit/elements/[0m[1mplotly_c[0m [31m [0m
+[31m [0m [1mhart.py[0m:509 in plotly_chart                                                          [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/clouduser/spike/smart/lib/python3.11/site-packages/streamlit/elements/lib/[0m[1mutil[0m [31m [0m
+[31m [0m [1ms.py[0m:239 in compute_and_register_element_id                                          [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/clouduser/spike/smart/lib/python3.11/site-packages/streamlit/elements/lib/[0m[1mutil[0m [31m [0m
+[31m [0m [1ms.py[0m:145 in _register_element_id                                                     [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mStreamlitDuplicateElementId: [0mThere are multiple `plotly_chart` elements with the same 
+auto-generated ID. When this element is created, it is assigned an internal ID based on 
+the element type and provided parameters. Multiple elements with the same type and 
+parameters will cause this error.
+
+To fix this error, please pass a unique `key` argument to the `plotly_chart` element.
+2025-05-07 17:44:37,010 - Dashboard - INFO - Initialized dashboard for EUR_USD with 5m timeframe
+2025-05-07 17:44:37,010 - Dashboard - INFO - Data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data
+2025-05-07 17:44:37,010 - Dashboard - INFO - Starting data refresh thread with 60s interval
+2025-05-07 17:44:37,024 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:44:37,081 - Dashboard - INFO - Loaded 1387 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:44:37,081 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:44:37,086 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:44:37,087 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:44:37,088 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:44:37,088 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:44:37,094 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:44:37,095 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:44:37,096 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:44:37,097 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:44:37,102 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:44:37,103 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:44:37,104 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:44:37,105 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:44:37,106 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:44:37,106 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:45:00,276 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:45:00,290 - Dashboard - INFO - Loaded 1387 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:45:00,291 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:45:00,295 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:45:00,296 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:45:00,297 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:45:00,297 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:45:00,301 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:45:00,301 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:45:00,302 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:45:00,303 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:45:00,306 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:45:00,307 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:45:00,307 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:45:00,308 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:45:00,309 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:45:00,309 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:45:26,680 - Dashboard - INFO - Initialized dashboard for EUR_USD with 5m timeframe
+2025-05-07 17:45:26,681 - Dashboard - INFO - Data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data
+2025-05-07 17:45:26,681 - Dashboard - INFO - Starting data refresh thread with 60s interval
+2025-05-07 17:45:26,732 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:45:26,746 - Dashboard - INFO - Loaded 1387 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:45:26,747 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:45:26,752 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:45:26,753 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:45:26,753 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:45:26,754 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:45:26,758 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:45:26,759 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:45:26,760 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:45:26,761 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:45:26,766 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:45:26,767 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:45:26,768 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:45:26,768 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:45:26,769 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:45:26,770 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:45:29,500 - Dashboard - INFO - Initialized dashboard for EUR_USD with 5m timeframe
+2025-05-07 17:45:29,500 - Dashboard - INFO - Data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data
+2025-05-07 17:45:29,501 - Dashboard - INFO - Starting data refresh thread with 60s interval
+2025-05-07 17:45:29,508 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:45:29,568 - Dashboard - INFO - Loaded 1387 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:45:29,570 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:45:29,584 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:45:29,586 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:45:29,587 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:45:29,589 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:45:29,600 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:45:29,602 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:45:29,602 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:45:29,603 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:45:29,606 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:45:29,607 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:45:29,607 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:45:29,608 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:45:29,608 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:45:29,609 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:45:37,109 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:45:37,121 - Dashboard - INFO - Loaded 1387 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:45:37,122 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:45:37,125 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:45:37,126 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:45:37,126 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:45:37,127 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:45:37,129 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:45:37,130 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:45:37,130 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:45:37,131 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:45:37,133 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:45:37,134 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:45:37,135 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:45:37,135 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:45:37,136 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:45:37,136 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:46:00,313 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:46:00,327 - Dashboard - INFO - Loaded 1387 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:46:00,328 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:46:00,331 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:46:00,331 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:46:00,332 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:46:00,333 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:46:00,336 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:46:00,337 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:46:00,337 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:46:00,338 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:46:00,341 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:46:00,342 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:46:00,342 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:46:00,343 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:46:00,344 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:46:00,344 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:46:26,772 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:46:26,782 - Dashboard - INFO - Loaded 1387 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:46:26,783 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:46:26,786 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:46:26,787 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:46:26,787 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:46:26,788 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:46:26,791 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:46:26,791 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:46:26,792 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:46:26,793 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:46:26,795 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:46:26,796 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:46:26,796 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:46:26,797 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:46:26,797 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:46:26,798 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:46:29,610 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:46:29,618 - Dashboard - INFO - Loaded 1387 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:46:29,620 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:46:29,623 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:46:29,623 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:46:29,624 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:46:29,625 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:46:29,627 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:46:29,629 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:46:29,629 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:46:29,630 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:46:29,632 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:46:29,633 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:46:29,633 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:46:29,634 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:46:29,634 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:46:29,635 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:46:37,139 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:46:37,152 - Dashboard - INFO - Loaded 1387 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:46:37,153 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:46:37,156 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:46:37,157 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:46:37,157 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:46:37,158 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:46:37,160 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:46:37,161 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:46:37,162 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:46:37,162 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:46:37,165 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:46:37,166 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:46:37,166 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:46:37,167 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:46:37,167 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:46:37,168 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:47:00,346 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:47:00,358 - Dashboard - INFO - Loaded 1439 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:47:00,359 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:47:00,362 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:47:00,363 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:47:00,364 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:47:00,365 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:47:00,368 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:47:00,368 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:47:00,369 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:47:00,369 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:47:00,372 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:47:00,373 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:47:00,373 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:47:00,374 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:47:00,375 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:47:00,375 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:47:26,800 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:47:26,810 - Dashboard - INFO - Loaded 1439 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:47:26,811 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:47:26,814 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:47:26,814 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:47:26,815 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:47:26,816 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:47:26,818 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:47:26,819 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:47:26,819 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:47:26,820 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:47:26,822 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:47:26,823 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:47:26,824 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:47:26,825 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:47:26,825 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:47:26,826 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:47:29,636 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:47:29,647 - Dashboard - INFO - Loaded 1439 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:47:29,648 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:47:29,651 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:47:29,652 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:47:29,652 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:47:29,653 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:47:29,656 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:47:29,656 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:47:29,657 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:47:29,658 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:47:29,660 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:47:29,661 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:47:29,661 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:47:29,662 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:47:29,663 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:47:29,663 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:47:37,171 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:47:37,185 - Dashboard - INFO - Loaded 1439 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:47:37,186 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:47:37,189 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:47:37,190 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:47:37,191 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:47:37,191 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:47:37,194 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:47:37,194 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:47:37,195 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:47:37,195 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:47:37,198 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:47:37,198 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:47:37,199 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:47:37,200 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:47:37,200 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:47:37,200 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:48:00,379 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:48:00,393 - Dashboard - INFO - Loaded 1439 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:48:00,394 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:48:00,398 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:48:00,398 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:48:00,399 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:48:00,400 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:48:00,402 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:48:00,403 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:48:00,403 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:48:00,404 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:48:00,407 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:48:00,407 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:48:00,408 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:48:00,409 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:48:00,409 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:48:00,410 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:48:26,829 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:48:26,843 - Dashboard - INFO - Loaded 1439 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:48:26,844 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:48:26,847 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:48:26,848 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:48:26,848 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:48:26,849 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:48:26,851 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:48:26,852 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:48:26,852 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:48:26,853 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:48:26,855 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:48:26,856 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:48:26,856 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:48:26,857 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:48:26,857 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:48:26,857 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:48:29,666 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:48:29,682 - Dashboard - INFO - Loaded 1439 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:48:29,683 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:48:29,687 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:48:29,688 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:48:29,688 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:48:29,689 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:48:29,692 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:48:29,693 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:48:29,693 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:48:29,694 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:48:29,697 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:48:29,698 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:48:29,698 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:48:29,699 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:48:29,700 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:48:29,700 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:48:37,203 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:48:37,215 - Dashboard - INFO - Loaded 1439 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:48:37,216 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:48:37,219 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:48:37,220 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:48:37,221 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:48:37,221 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:48:37,224 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:48:37,225 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:48:37,225 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:48:37,226 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:48:37,228 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:48:37,229 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:48:37,229 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:48:37,230 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:48:37,231 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:48:37,232 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+2025-05-07 17:49:00,411 - Dashboard - INFO - Loading raw data from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:49:00,420 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/latest.csv
+2025-05-07 17:49:00,421 - Dashboard - INFO - Loading analyzed data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:49:00,425 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_analyzed.csv
+2025-05-07 17:49:00,426 - Dashboard - INFO - Loading pattern data for minimum from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/minimum/latest_patterns.json
+2025-05-07 17:49:00,427 - Dashboard - ERROR - Error loading pattern data for minimum: string indices must be integers, not 'str'
+2025-05-07 17:49:00,428 - Dashboard - INFO - Loading analyzed data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:49:00,432 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_analyzed.csv
+2025-05-07 17:49:00,433 - Dashboard - INFO - Loading pattern data for recommended from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/recommended/latest_patterns.json
+2025-05-07 17:49:00,433 - Dashboard - ERROR - Error loading pattern data for recommended: string indices must be integers, not 'str'
+2025-05-07 17:49:00,434 - Dashboard - INFO - Loading analyzed data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:49:00,437 - Dashboard - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 17:49:00,438 - Dashboard - INFO - Loading pattern data for optimal from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 17:49:00,439 - Dashboard - ERROR - Error loading pattern data for optimal: string indices must be integers, not 'str'
+2025-05-07 17:49:00,439 - Dashboard - INFO - Loading predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:49:00,440 - Dashboard - INFO - Loaded 7 predictions from /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/latest_predictions.json
+2025-05-07 17:49:00,441 - Dashboard - WARNING - No files matching '_performance.json' found in /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m
+  Stopping...

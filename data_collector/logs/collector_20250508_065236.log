@@ -1,0 +1,36 @@
+2025-05-08 06:52:37,348 - DataCollector - INFO - Initialized data collector for EUR_USD with 5m timeframe
+2025-05-08 06:52:37,348 - DataCollector - INFO - Data will be stored in /home/clouduser/spike/forex_spike_predictor/specialized/data/raw
+2025-05-08 06:52:37,348 - DataCollector - INFO - Starting data collection for EUR_USD at 5s intervals
+2025-05-08 06:53:32,365 - DataCollector - INFO - Collected 10 data points
+2025-05-08 06:54:32,906 - DataCollector - INFO - Collected 20 data points
+2025-05-08 06:55:33,376 - DataCollector - INFO - Collected 30 data points
+2025-05-08 06:56:33,552 - DataCollector - INFO - Collected 40 data points
+2025-05-08 06:57:33,606 - DataCollector - INFO - Collected 50 data points
+2025-05-08 06:57:39,674 - DataCollector - INFO - Saved 51 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 06:58:41,512 - DataCollector - INFO - Collected 10 data points
+2025-05-08 06:59:45,007 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:00:51,978 - DataCollector - INFO - Collected 30 data points
+2025-05-08 07:01:53,112 - DataCollector - INFO - Collected 40 data points
+2025-05-08 07:02:42,799 - DataCollector - INFO - Saved 48 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:03:47,795 - DataCollector - INFO - Collected 10 data points
+2025-05-08 07:04:49,028 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:05:54,636 - DataCollector - INFO - Collected 30 data points
+2025-05-08 07:06:55,802 - DataCollector - INFO - Collected 40 data points
+2025-05-08 07:07:45,186 - DataCollector - INFO - Saved 48 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:09:43,953 - DataCollector - INFO - Collected 10 data points
+2025-05-08 07:10:45,076 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:14:15,476 - DataCollector - INFO - Saved 25 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:16:45,226 - DataCollector - INFO - Collected 10 data points
+2025-05-08 07:17:26,268 - DataCollector - ERROR - Error fetching price: HTTPSConnectionPool(host='api.polygon.io', port=443): Max retries exceeded with url: /v1/last_quote/currencies/EUR/USD?apiKey=p6WersYkAHkp9TccmLHvdDwGaZ4CnR0Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7d854dd6d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2025-05-08 07:18:42,708 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:19:19,501 - DataCollector - INFO - Saved 26 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:20:17,539 - DataCollector - INFO - Collected 10 data points
+2025-05-08 07:21:15,489 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:22:12,381 - DataCollector - INFO - Collected 30 data points
+2025-05-08 07:23:11,526 - DataCollector - INFO - Collected 40 data points
+2025-05-08 07:24:23,077 - DataCollector - INFO - Saved 47 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:25:41,752 - DataCollector - INFO - Collected 10 data points
+2025-05-08 07:28:01,030 - DataCollector - INFO - Collected 20 data points
+2025-05-08 07:28:58,125 - DataCollector - INFO - Collected 30 data points
+2025-05-08 07:29:26,637 - DataCollector - INFO - Saved 35 records to /home/clouduser/spike/forex_spike_predictor/specialized/data/raw/EUR_USD/5m/20250508_EUR_USD_5m.csv
+2025-05-08 07:30:23,527 - DataCollector - INFO - Collected 10 data points

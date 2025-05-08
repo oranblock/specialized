@@ -1,0 +1,55 @@
+2025-05-07 11:39:48,277 - PredictionEngine - INFO - Initialized prediction engine for EUR_USD with 5m timeframe
+2025-05-07 11:39:48,278 - PredictionEngine - INFO - Analyzed data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed
+2025-05-07 11:39:48,278 - PredictionEngine - INFO - Prediction output directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions
+2025-05-07 11:39:48,278 - PredictionEngine - INFO - Generating prediction using optimal data and ensemble_method method
+2025-05-07 11:39:48,280 - PredictionEngine - INFO - Found latest analyzed data file for optimal: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 11:39:48,280 - PredictionEngine - INFO - Loading analyzed data from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 11:39:48,302 - PredictionEngine - INFO - Loaded 7 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-07 11:39:48,303 - PredictionEngine - INFO - Found latest pattern data file for optimal: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 11:39:48,303 - PredictionEngine - INFO - Loading pattern data from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-07 11:39:48,304 - PredictionEngine - ERROR - Error loading pattern data: string indices must be integers, not 'str'
+2025-05-07 11:39:48,304 - PredictionEngine - INFO - Generating technical prediction
+2025-05-07 11:39:48,305 - PredictionEngine - INFO - Technical prediction: UP with 0.73 confidence
+2025-05-07 11:39:48,305 - PredictionEngine - INFO - Generating pattern-based prediction
+2025-05-07 11:39:48,305 - PredictionEngine - WARNING - No pattern data available
+2025-05-07 11:39:48,305 - PredictionEngine - INFO - Generating ensemble prediction
+2025-05-07 11:39:48,305 - PredictionEngine - INFO - Ensemble prediction: UP with 0.73 confidence
+2025-05-07 11:39:48,306 - PredictionEngine - INFO - Calculating pip targets with ATR multiplier 1.5
+2025-05-07 11:39:48,306 - PredictionEngine - WARNING - Not enough data for pip target calculation
+2025-05-07 11:39:48,307 - PredictionEngine - INFO - Saved prediction to /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/20250507_EUR_USD_5m_predictions.json
+2025-05-07 11:39:48,307 - PredictionEngine - INFO - Generated prediction: UP with 0.73 confidence
+{
+  "timestamp": "2025-05-07T11:39:48.306183",
+  "symbol": "EUR_USD",
+  "timeframe": "5m",
+  "current_price": 1.078,
+  "data_depth": "optimal",
+  "method": "ensemble_method",
+  "direction": "UP",
+  "confidence": 0.7310000000000001,
+  "pip_target": 0.0,
+  "take_profit": 0.0,
+  "stop_loss": 0.0,
+  "signals": {
+    "technical": {
+      "direction": "UP",
+      "confidence": 0.7310000000000001,
+      "weight": 1.0
+    },
+    "pattern": {
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "weight": 0.0
+    },
+    "ml": {
+      "direction": "NEUTRAL",
+      "confidence": 0.5,
+      "weight": 0.0
+    },
+    "direction_scores": {
+      "UP": 0.7310000000000001,
+      "DOWN": 0,
+      "NEUTRAL": 0.0
+    }
+  }
+}

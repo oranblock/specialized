@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-05-07T09:30:00",
+  "symbol": "EUR_USD",
+  "timeframe": "5m",
+  "analysis_depth": "minimum",
+  "patterns": [
+    {
+      "time": "2025-05-07 09:10:00",
+      "pattern": "BULLISH_ENGULFING",
+      "strength": 0.75,
+      "confirmation": true
+    },
+    {
+      "time": "2025-05-07 09:20:00",
+      "pattern": "BEARISH_HARAMI",
+      "strength": 0.62,
+      "confirmation": true
+    },
+    {
+      "time": "2025-05-07 09:30:00",
+      "pattern": "HAMMER",
+      "strength": 0.81,
+      "confirmation": true
+    }
+  ],
+  "support_levels": [1.0762, 1.0755],
+  "resistance_levels": [1.0781, 1.0790]
+}

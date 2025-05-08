@@ -1,0 +1,70 @@
+2025-05-08 06:01:37,372 - PredictionEngine - INFO - Initialized prediction engine for EUR_USD with 5m timeframe
+2025-05-08 06:01:37,372 - PredictionEngine - INFO - Analyzed data directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed
+2025-05-08 06:01:37,372 - PredictionEngine - INFO - Prediction output directory: /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions
+2025-05-08 06:01:37,372 - PredictionEngine - INFO - Starting prediction loop at 300s intervals
+2025-05-08 06:01:37,372 - PredictionEngine - INFO - Prediction run #1
+2025-05-08 06:01:37,372 - PredictionEngine - INFO - Generating prediction using optimal data and ensemble_method method
+2025-05-08 06:01:37,372 - PredictionEngine - INFO - Found latest analyzed data file for optimal: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:01:37,372 - PredictionEngine - INFO - Loading analyzed data from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:01:37,383 - PredictionEngine - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:01:37,384 - PredictionEngine - INFO - Found latest pattern data file for optimal: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:01:37,384 - PredictionEngine - INFO - Loading pattern data from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:01:37,385 - PredictionEngine - INFO - Loaded 1 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:01:37,386 - PredictionEngine - INFO - Generating technical prediction
+2025-05-08 06:01:37,386 - PredictionEngine - INFO - Technical prediction: NEUTRAL with 0.50 confidence
+2025-05-08 06:01:37,386 - PredictionEngine - INFO - Generating pattern-based prediction
+2025-05-08 06:01:37,386 - PredictionEngine - INFO - Pattern prediction: NEUTRAL with 0.50 confidence
+2025-05-08 06:01:37,386 - PredictionEngine - INFO - Found 0 bullish and 0 bearish patterns
+2025-05-08 06:01:37,386 - PredictionEngine - INFO - Generating ensemble prediction
+2025-05-08 06:01:37,386 - PredictionEngine - INFO - Ensemble prediction: NEUTRAL with 0.50 confidence
+2025-05-08 06:01:37,386 - PredictionEngine - INFO - Calculating pip targets with ATR multiplier 1.5
+2025-05-08 06:01:37,387 - PredictionEngine - INFO - Calculated pip target: 0.0 pips
+2025-05-08 06:01:37,387 - PredictionEngine - INFO - Take profit: 1.12976, Stop loss: 1.12976
+2025-05-08 06:01:37,388 - PredictionEngine - INFO - Saved prediction to /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/20250508_EUR_USD_5m_predictions.json
+2025-05-08 06:01:37,388 - PredictionEngine - INFO - Generated prediction: NEUTRAL with 0.50 confidence
+2025-05-08 06:01:37,389 - PredictionEngine - INFO - Prediction: NEUTRAL with 0.50 confidence
+2025-05-08 06:01:37,389 - PredictionEngine - INFO - Waiting 300s until next prediction run
+2025-05-08 06:06:37,390 - PredictionEngine - INFO - Prediction run #2
+2025-05-08 06:06:37,390 - PredictionEngine - INFO - Generating prediction using optimal data and ensemble_method method
+2025-05-08 06:06:37,393 - PredictionEngine - INFO - Found latest analyzed data file for optimal: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:06:37,393 - PredictionEngine - INFO - Loading analyzed data from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:06:37,404 - PredictionEngine - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:06:37,405 - PredictionEngine - INFO - Found latest pattern data file for optimal: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:06:37,405 - PredictionEngine - INFO - Loading pattern data from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:06:37,406 - PredictionEngine - INFO - Loaded 1 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:06:37,406 - PredictionEngine - INFO - Generating technical prediction
+2025-05-08 06:06:37,407 - PredictionEngine - INFO - Technical prediction: DOWN with 0.65 confidence
+2025-05-08 06:06:37,407 - PredictionEngine - INFO - Generating pattern-based prediction
+2025-05-08 06:06:37,407 - PredictionEngine - INFO - Pattern prediction: NEUTRAL with 0.50 confidence
+2025-05-08 06:06:37,407 - PredictionEngine - INFO - Found 0 bullish and 0 bearish patterns
+2025-05-08 06:06:37,407 - PredictionEngine - INFO - Generating ensemble prediction
+2025-05-08 06:06:37,407 - PredictionEngine - INFO - Ensemble prediction: DOWN with 0.35 confidence
+2025-05-08 06:06:37,407 - PredictionEngine - INFO - Calculating pip targets with ATR multiplier 1.5
+2025-05-08 06:06:37,407 - PredictionEngine - INFO - Calculated pip target: 0.7 pips
+2025-05-08 06:06:37,408 - PredictionEngine - INFO - Take profit: 1.13048, Stop loss: 1.13060
+2025-05-08 06:06:37,410 - PredictionEngine - INFO - Saved prediction to /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/20250508_EUR_USD_5m_predictions.json
+2025-05-08 06:06:37,410 - PredictionEngine - INFO - Generated prediction: DOWN with 0.35 confidence
+2025-05-08 06:06:37,410 - PredictionEngine - INFO - Prediction: DOWN with 0.35 confidence
+2025-05-08 06:06:37,410 - PredictionEngine - INFO - Waiting 300s until next prediction run
+2025-05-08 06:11:37,411 - PredictionEngine - INFO - Prediction run #3
+2025-05-08 06:11:37,415 - PredictionEngine - INFO - Generating prediction using optimal data and ensemble_method method
+2025-05-08 06:11:37,417 - PredictionEngine - INFO - Found latest analyzed data file for optimal: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:11:37,417 - PredictionEngine - INFO - Loading analyzed data from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:11:37,429 - PredictionEngine - INFO - Loaded 100 records from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_analyzed.csv
+2025-05-08 06:11:37,430 - PredictionEngine - INFO - Found latest pattern data file for optimal: /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:11:37,430 - PredictionEngine - INFO - Loading pattern data from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:11:37,431 - PredictionEngine - INFO - Loaded 1 pattern types with 90 instances from /home/clouduser/spike/forex_spike_predictor/specialized/data/analyzed/EUR_USD/5m/optimal/latest_patterns.json
+2025-05-08 06:11:37,431 - PredictionEngine - INFO - Generating technical prediction
+2025-05-08 06:11:37,431 - PredictionEngine - INFO - Technical prediction: UP with 0.65 confidence
+2025-05-08 06:11:37,432 - PredictionEngine - INFO - Generating pattern-based prediction
+2025-05-08 06:11:37,432 - PredictionEngine - INFO - Pattern prediction: NEUTRAL with 0.50 confidence
+2025-05-08 06:11:37,432 - PredictionEngine - INFO - Found 0 bullish and 0 bearish patterns
+2025-05-08 06:11:37,432 - PredictionEngine - INFO - Generating ensemble prediction
+2025-05-08 06:11:37,432 - PredictionEngine - INFO - Ensemble prediction: UP with 0.35 confidence
+2025-05-08 06:11:37,432 - PredictionEngine - INFO - Calculating pip targets with ATR multiplier 1.5
+2025-05-08 06:11:37,432 - PredictionEngine - INFO - Calculated pip target: 0.5 pips
+2025-05-08 06:11:37,432 - PredictionEngine - INFO - Take profit: 1.13038, Stop loss: 1.13029
+2025-05-08 06:11:37,435 - PredictionEngine - INFO - Saved prediction to /home/clouduser/spike/forex_spike_predictor/specialized/data/predictions/EUR_USD/5m/20250508_EUR_USD_5m_predictions.json
+2025-05-08 06:11:37,435 - PredictionEngine - INFO - Generated prediction: UP with 0.35 confidence
+2025-05-08 06:11:37,435 - PredictionEngine - INFO - Prediction: UP with 0.35 confidence
+2025-05-08 06:11:37,435 - PredictionEngine - INFO - Waiting 300s until next prediction run
